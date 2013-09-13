@@ -1,0 +1,30 @@
+web1:
+  name: jeffrey
+  php_upload_max_filesize: "32M"
+  php_post_max_size: "32M"
+  shared_writable_dirs:
+    - wp-content/uploads
+    - wp-content/cache
+  php_extensions:
+    - curl
+    - dom
+    - eaccelerator
+    - gd
+    - hash
+    - iconv
+    - mbstring
+    - mcrypt
+    - memcache
+    - mysql
+    - mysqli
+    - openssl
+    - simplexml
+    - soap
+    - wddx
+    - xml
+    - xmlreader
+    - xmlrpc
+    - xmlwriter
+  after_build:
+    - "mv pagoda/wp-config.php wp-config.php"
+    - "mv pagoda/.htaccess .htaccess"
