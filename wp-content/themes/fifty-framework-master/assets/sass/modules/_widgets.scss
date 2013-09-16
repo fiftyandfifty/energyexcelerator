@@ -91,24 +91,25 @@
     &.halves {
       @include clearfix;
 
-      .footer-widget {float:left;width:50%;}
+      .footer-widget {@extend %span6;}
     }
 
     &.thirds {
       @include clearfix;
 
-      .footer-widget {float:left;width:33.3333333333333333333%;}
+      .footer-widget {@extend %span4;}
     }
 
     &.fourths {
       @include clearfix;
 
-      .footer-widget {float:left;width:25%;}
+      .footer-widget {@extend %span3;}
     }
 
   }
 
-    // FOOTER-WIDGET
+    /* FOOTER WIDGET
+    ================================================== */
     .widget.footer-widget {
       margin-bottom:0;
 
@@ -123,7 +124,7 @@
           border-bottom:1px solid #5a5a5a;
 
           a {
-            padding:.8em 0;
+            padding:.8em .2em;
             display:block;
           }
         }
@@ -132,7 +133,10 @@
           &:hover {color:$colorAnchorDefault;}
         }
       }
-
+    
+      /* FOOTER-WIDGET > MENU-SOCIAL
+       * Needs overrides to reset styles from footer-widget
+      ===================================================== */
       ul.menu-social {
         li {
           line-height:1;

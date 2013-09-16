@@ -18,6 +18,8 @@
         FF.modalEffects();
         FF.fauxPlaceholders();
         FF.regex();
+        FF.lazyLoadVideo();
+        // FF.collapsableSidebar();
     };
 
     /* SET ELEMENTS
@@ -234,6 +236,95 @@
     }
 
 
+    /* COLLAPSABLE SIDEBAR
+    ================================================== */
+    FF.collapsableSidebar = function() {
+
+        var sidebar_default = $('#sidebar_default');
+
+        $('#sidebar-toggle').toggle(function(){
+            $('#sidebar-default').stop().animate({
+                'width'     : '5%'
+            }, function () {
+                $('#content').animate({
+                    'width'     : '92%'
+                });
+            });
+            $('.sidebar-inner').stop().animate({
+                'left'      : '-700px',
+                'opacity'   : '0'
+            }, 500);
+            
+        }, function() {
+            $('#sidebar-default').animate({
+                'width'     : '25%'
+            }, function() {
+                
+            });
+            $('.sidebar-inner').stop().animate({
+                'left'      : '0px',
+                'opacity'   : '1'
+            });
+            $('#content').animate({
+                'width'     : '75%'
+            }, 350);
+        
+        });
+    }
+
+
+    /* LAZYLOAD VIDEO
+    ================================================== */
+    FF.lazyLoadVideo = function() {
+
+        $('.lazyload').click(function(){
+            var $this           = $(this),
+                video_id        = $this.data('video-id'),
+                video_service   = $this.data('video-service'),
+                width           = $this.width(),
+                height          = $this.height();
+
+                console.log(width, height);
+
+            // embed code builder function
+            function buildEmbed(service, id) {
+                if (service === 'youtube') {
+                    var embed = '<iframe width="'+width+'" height="'+height+'" src="//www.youtube.com/embed/'+video_id+'?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+                    return embed;
+                }
+                if (service === 'vimeo') {
+                    var embed = '<iframe src="//player.vimeo.com/video/'+video_id+'?title=0&amp;autoplay=1&amp;byline=0&amp;portrait=0&amp;badge=0" width="'+width+'" height="'+height+'" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+                    return embed;
+                }
+            }
+
+            // build the embed code
+            var embed_code = buildEmbed(video_service, video_id);
+
+            // remove inner elements
+            $this.find('img').remove();
+            $this.find('.post-format-video-overlay').remove();
+
+            // append the generated embed code
+            $this.append(embed_code);
+        });
+    }
+
+
+    /* LAZYLOAD IMAGE - Run at window onload & scroll
+    ================================================== */
+    FF.lazyLoadImage = function(method) {
+
+        if ( method === 'delayed' ) {
+            setTimeout(function(){
+                $('.lazyload-img:in-viewport').addClass('show');
+            }, 100);
+        } else {
+            $('.lazyload-img:in-viewport').addClass('show');
+        }
+    }
+
+
 
     /* ================================================================ */
     /*                                                                  */
@@ -247,17 +338,8 @@
     ================================================== */
     $(document).ready(function(){
         
+        // do stuff on document ready
         FF.init();
-
-        // FF.flexLoader(
-        //     $('.flexslider'), 
-        //     {
-        //         animation   : "slide",
-        //         prevText    : "N",
-        //         nextText    : "n",
-        //         start: function(slider){ }
-        //     } 
-        // );
 
     });
 
@@ -266,6 +348,7 @@
     $(window).load(function(){
         
         // do stuff once the page has finished loading
+        FF.lazyLoadImage();
 
     });
 
@@ -275,6 +358,8 @@
 
         // DEBUG - winY position
         if (DEBUG) { var winY = $(window).scrollTop(); console.log(winY);}
+
+        FF.lazyLoadImage();
 
     });
 
@@ -310,3 +395,6 @@
     })();
 
 })(jQuery);
+
+// Viewport selectors - URL: http://www.appelsiini.net/projects/viewport
+(function($){$.belowthefold=function(element,settings){var fold=$(window).height()+$(window).scrollTop();return fold<=$(element).offset().top-settings.threshold;};$.abovethetop=function(element,settings){var top=$(window).scrollTop();return top>=$(element).offset().top+$(element).height()-settings.threshold;};$.rightofscreen=function(element,settings){var fold=$(window).width()+$(window).scrollLeft();return fold<=$(element).offset().left-settings.threshold;};$.leftofscreen=function(element,settings){var left=$(window).scrollLeft();return left>=$(element).offset().left+$(element).width()-settings.threshold;};$.inviewport=function(element,settings){return!$.rightofscreen(element,settings)&&!$.leftofscreen(element,settings)&&!$.belowthefold(element,settings)&&!$.abovethetop(element,settings);};$.extend($.expr[':'],{"below-the-fold":function(a,i,m){return $.belowthefold(a,{threshold:0});},"above-the-top":function(a,i,m){return $.abovethetop(a,{threshold:0});},"left-of-screen":function(a,i,m){return $.leftofscreen(a,{threshold:0});},"right-of-screen":function(a,i,m){return $.rightofscreen(a,{threshold:0});},"in-viewport":function(a,i,m){return $.inviewport(a,{threshold:0});}});})(jQuery);
