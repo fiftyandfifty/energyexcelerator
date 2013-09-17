@@ -1,7 +1,10 @@
 <?php
 
+$ppp = get_sub_field('number_posts');
+
 $blog_args = array(
-	'post_type'	=>	'post',
+	'post_type'			=>	'post',
+	'posts_per_page'	=>	isset( $ppp ) ? $ppp : 2
 );
 
 $blog_query = new WP_Query( $blog_args ); ?>

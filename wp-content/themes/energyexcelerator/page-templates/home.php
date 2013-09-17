@@ -10,10 +10,34 @@ get_header(); ?>
 	'category' => 'home'
 )); ?>
 
-<?php get_template_part( 'modules/blog', 'index' ); ?>
+<style>
+.span4 img {
+	padding-right: 3px;
+}
+</style>
 
+<?php if( has_sub_field( 'home_builder', 'option' )) : ?>
+	<?php while( has_sub_field('modules', 'option')) : ?>
+		
+		<?php if( get_row_layout() == 'blog') : ?>
+			<?php get_template_part( 'partials/blog', 'index' ); ?>
+		<?php endif; ?>
 
-<?php  get_template_part( 'modules/staff', 'index'); ?>
+		<?php if( get_row_layout() == "staff") : ?>
+			<?php get_template_part( 'partials/staff', 'index' ); ?>
+		<?php endif; ?>
+
+		<?php if( get_row_layout() == "portfolio") : ?>
+			<?php get_template_part( 'partials/portfolio', 'index' ); ?>
+		<?php endif; ?>
+
+		<?php if( get_row_layout() == "page") : ?>
+			<?php get_template_part( 'partials/page', 'index' ); ?>
+		<?php endif; ?>
+
+	<?php endwhile; ?>
+<?php endif; ?>
+
 
 <div id="main">
 	<div class="container">

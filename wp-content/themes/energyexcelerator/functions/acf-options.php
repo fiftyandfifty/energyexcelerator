@@ -9,10 +9,4 @@ if( function_exists('acf_add_options_sub_page') ){
         'capability' => 'manage_options'
     ));
 
-    acf_add_options_sub_page(array(
-        'title' => 'Post Order',
-        'menu'	=> 'Testing Menu Name',
-        'parent' => 'edit.php',
-        'capability' => 'manage_options'
-    ));
 }
