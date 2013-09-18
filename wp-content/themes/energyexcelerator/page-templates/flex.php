@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Flexible Home
+Template Name: Flexible Template
 */
 get_header(); ?>
 
@@ -16,37 +16,25 @@ get_header(); ?>
 }
 </style>
 
-<?php if( has_sub_field( 'home_builder', 'option' )) : ?>
-	<?php while( has_sub_field('modules', 'option')) : ?>
+	<?php while( has_sub_field( 'sections', $post->ID ) ) : ?>
 		
-		<?php if( get_row_layout() == 'blog') : ?>
+		<?php if( get_row_layout() == 'blog_layout') : ?>
 			<?php get_template_part( 'partials/blog', 'index' ); ?>
 		<?php endif; ?>
 
-		<?php if( get_row_layout() == "staff") : ?>
+		<?php if( get_row_layout() == "staff_layout") : ?>
 			<?php get_template_part( 'partials/staff', 'index' ); ?>
 		<?php endif; ?>
 
-		<?php if( get_row_layout() == "portfolio") : ?>
+		<?php if( get_row_layout() == "portfolio_layout") : ?>
 			<?php get_template_part( 'partials/portfolio', 'index' ); ?>
 		<?php endif; ?>
 
-		<?php if( get_row_layout() == "page") : ?>
+		<?php if( get_row_layout() == "page_layout") : ?>
 			<?php get_template_part( 'partials/page', 'index' ); ?>
 		<?php endif; ?>
 
 	<?php endwhile; ?>
-<?php endif; ?>
-
-
-<div id="main">
-	<div class="container">
-		<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-			<h1><?php the_title(); ?></h1>
-			<?php the_content(); ?>
-		<?php endwhile; endif; ?>
-	</div>
-</div>
 
 
 <?php get_footer(); ?>

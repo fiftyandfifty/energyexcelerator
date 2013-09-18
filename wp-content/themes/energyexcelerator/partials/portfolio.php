@@ -20,4 +20,4 @@ $staff_query = new WP_Query( $staff_args ); ?>
 		<?php endwhile; ?>
 		</div>
 	</section>
-<?php endif; ?>
+<?php endif; wp_reset_query(); ?>

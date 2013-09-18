@@ -14,4 +14,4 @@ if( $page_query->have_posts() ) : while( $page_query->have_posts() ) : $page_que
 	<?php the_excerpt(); ?>
 </div>
 
-<?php endwhile; endif; ?>
+<?php endwhile; endif; wp_reset_query(); ?>

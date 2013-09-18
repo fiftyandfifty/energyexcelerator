@@ -3,7 +3,7 @@
 /* SASS Libraries */
 @import "compass",
         "susy",
-        "mixins";
+        "mixins"; 
 
 /* Reset */
 @import "vendor/normalize";
@@ -12,6 +12,7 @@
 @import "config",
         "core/grid",
         "core/base",
+        "core/fonts",
         "core/typography",
         "core/body";
 

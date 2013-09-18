@@ -1,6 +1,6 @@
 <?php 
 
-add_action( 'init', 'FFW_debug_functions' );
+//add_action( 'init', 'FFW_debug_functions' );
 
 function FFW_debug_functions() {
 
