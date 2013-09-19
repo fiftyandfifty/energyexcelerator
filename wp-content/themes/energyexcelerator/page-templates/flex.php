@@ -15,6 +15,7 @@ get_header(); ?>
 	padding-right: 3px;
 }
 </style>
+	<?php $page_content_location = get_field('') ?>
 
 	<?php while( has_sub_field( 'sections', $post->ID ) ) : ?>
 		
