@@ -15,7 +15,15 @@ get_header(); ?>
 	padding-right: 3px;
 }
 </style>
-	<?php $page_content_location = get_field('') ?>
+	<?php 
+	//set $page_content_location to meta field variable
+	$page_content_location = get_field('page_content_location'); ?>
+	
+	<?php 
+	//Conditional checking if the user wants the page content "Above" ::case sensitive
+	if( $page_content_location == 'Above') : ?>
+		<?php get_template_part( 'partials/page', 'index' ); ?>
+	<?php endif; ?>
 
 	<?php while( has_sub_field( 'sections', $post->ID ) ) : ?>
 		
@@ -32,10 +40,16 @@ get_header(); ?>
 		<?php endif; ?>
 
 		<?php if( get_row_layout() == "page_layout") : ?>
-			<?php get_template_part( 'partials/page', 'index' ); ?>
+			<?php get_template_part( 'partials/page', 'external' ); ?>
 		<?php endif; ?>
 
 	<?php endwhile; ?>
+
+	<?php 
+	//Conditional checking if the user wants the page content "Below" ::case sensitive
+	if( $page_content_location == 'Below') : ?>
+		<?php get_template_part( 'partials/page', 'index' ); ?>
+	<?php endif; ?>
 
 
 <?php get_footer(); ?>
