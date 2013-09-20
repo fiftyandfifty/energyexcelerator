@@ -15,6 +15,8 @@ get_header(); ?>
 	padding-right: 3px;
 }
 </style>
+
+
 	<?php 
 	//set $page_content_location to meta field variable
 	$page_content_location = get_field('page_content_location'); ?>
@@ -26,6 +28,7 @@ get_header(); ?>
 	<?php endif; ?>
 
 	<?php while( has_sub_field( 'sections', $post->ID ) ) : ?>
+
 		
 		<?php if( get_row_layout() == 'blog_layout') : ?>
 			<?php get_template_part( 'partials/blog', 'index' ); ?>
