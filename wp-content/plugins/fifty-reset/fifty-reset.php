@@ -34,3 +34,44 @@ function remove_dashboard_widgets() {
   unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
 } 
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+
+/* testing menu items */
+add_action('admin_bar_menu', 'pippin_add_tool_bar_items', 100);
+function pippin_add_tool_bar_items($admin_bar)
+{
+	$admin_bar->add_menu( array(
+		'id'    => 'fifty-fifty-menu',
+		'title' => 'Fifty & Fifty Support',
+		'href'  => '#',
+		'meta'  => array(
+			'title' => __('Fifty & Fifty Support')
+		),
+	));
+
+	$admin_bar->add_menu( array(
+		'id'    => 'fifty-fifty-sub-menu-emaio',
+		'parent' => 'fifty-fifty-menu',
+		'title' => 'Email',
+		'href'  => 'mailto:braden@fiftyandfifty.org',
+		'meta'  => array(
+			'title' => __('Email'),
+			'target' => '_blank',
+			'class' => 'email_menu_item_class'
+		),
+	));
+
+	$admin_bar->add_menu( array(
+		'id'    => 'fifty-fifty-sub-menu-basecamp',
+		'parent' => 'fifty-fifty-menu',
+		'title' => 'Basecamp',
+		'href'  => 'https://basecamp.com/2029646/',
+		'meta'  => array(
+			'title' => __('Basecamp'),
+			'target' => '_blank',
+			'class' => 'basecamp_menu_item_class'
+		),
+	));
+}
+
+
+
