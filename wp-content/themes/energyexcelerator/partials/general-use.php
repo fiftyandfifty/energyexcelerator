@@ -4,7 +4,7 @@
 	$text_color 		= get_sub_field('text_color');
 	$background_image 	= get_sub_field('background_image');
 	$repeat_image		= get_sub_field('repeat_image');
-	
+	$section_width = get_sub_field('section_width'); // get the container class (section_width ACF)
 
 	
 
@@ -39,7 +39,7 @@
 	}
  ?>
 <section style="<?php echo $background_color. $text_color . $background_image; ?>">
-	<div class="container">
+	<div class="<?php echo $section_width; ?>">
 		<?php echo $section_content; ?>
 	</div>
 </section>
