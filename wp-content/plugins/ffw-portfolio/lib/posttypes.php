@@ -1,7 +1,7 @@
 <?php
 
-add_action( 'init', 'ee_port_create_posttype' );
-function ee_port_create_posttype(){
+add_action( 'init', 'FFW_port_create_posttype' );
+function FFW_port_create_posttype(){
 
 	//@TODO: Make Labels and slug editable from the plugin settings. This way they can change from "Staff" to "Team" or "People"
 
@@ -29,19 +29,19 @@ function ee_port_create_posttype(){
 	); 
 
 	    
-	register_post_type( 'ee_portfolio', $args );
+	register_post_type( 'FFW_portfolio', $args );
 
 }
 
-function ee_port_rewrite_flush() {
+function FFW_port_rewrite_flush() {
     // First, we "add" the custom post type via the above written function.
     // Note: "add" is written with quotes, as CPTs don't get added to the DB,
     // They are only referenced in the post_type column with a post entry, 
     // when you add a post of this CPT.
-    ee_port_create_posttype();
+    FFW_port_create_posttype();
 
     // ATTENTION: This is *only* done during plugin activation hook in this example!
     // You should *NEVER EVER* do this on every page load!!
     flush_rewrite_rules();
 }
-register_activation_hook( __FILE__, 'ee_port_rewrite_flush' );
+register_activation_hook( __FILE__, 'FFW_port_rewrite_flush' );

@@ -5,13 +5,13 @@
 </style>
 <?php 
 
-$posts 				= get_sub_field('portfolio_items');
-$section_title	 	= get_sub_field('section_title'); 
-$background_color 	= get_sub_field('background_color'); 
-$text_color 		= get_sub_field('text_color');
-$background_image 	= get_sub_field('background_image');
-$repeat_image		= get_sub_field('repeat_image');
-$archive_link		= get_sub_field('archive_link');
+$posts            = get_sub_field('portfolio_items');
+$section_title    = get_sub_field('section_title'); 
+$background_color = get_sub_field('background_color'); 
+$text_color       = get_sub_field('text_color');
+$background_image = get_sub_field('background_image');
+$repeat_image     = get_sub_field('repeat_image');
+$archive_link     = get_sub_field('archive_link');
 
 
 //Set background Color
@@ -79,7 +79,7 @@ if( $posts ): ?>
 	</section>
 <?php else :  ?>
 
-	<section class="staff" style="width:100%; background:#333; color:#fff; background-image: url(http://energy.dev/wp-content/uploads/2013/09/reagan_work_marcus_price.jpeg);">
+	<section class="staff" style="width:100%; background:#333; color:#fff; background-image: url(/wp-content/uploads/2013/09/reagan_work_marcus_price.jpeg);">
 		<div class="container">
 			<h1>Our Portfolio</h1>
 			<div class="span4">

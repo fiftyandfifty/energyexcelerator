@@ -1,7 +1,7 @@
 <?php
 
-add_action( 'init', 'ee_staff_custom_taxonomies' );
-function ee_staff_custom_taxonomies(){
+add_action( 'init', 'FFW_staff_custom_taxonomies' );
+function FFW_staff_custom_taxonomies(){
 	$labels = array(
 		'name' => _x( 'Staff Categories', 'taxonomy general name' ),
 		'singular_name' => _x( 'Staff Category', 'taxonomy singular name' ),
@@ -17,7 +17,7 @@ function ee_staff_custom_taxonomies(){
 	); 	
 
 	register_taxonomy(
-		'campaign_categories', array('ee_staff'), array(
+		'campaign_categories', array('FFW_staff'), array(
 		'hierarchical' => true,
 		'labels' => $labels,
 		'show_ui' => true,

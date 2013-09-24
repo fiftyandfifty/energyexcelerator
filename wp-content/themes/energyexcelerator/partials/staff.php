@@ -5,13 +5,13 @@
 </style>
 <?php 
 
-$posts 				= get_sub_field('staff_members');
-$section_title	 	= get_sub_field('section_title'); 
-$background_color 	= get_sub_field('background_color'); 
-$text_color 		= get_sub_field('text_color');
-$background_image 	= get_sub_field('background_image');
-$repeat_image		= get_sub_field('repeat_image');
-$archive_link		= get_sub_field('archive_link');
+$posts            = get_sub_field('staff_members');
+$section_title    = get_sub_field('section_title'); 
+$background_color = get_sub_field('background_color'); 
+$text_color       = get_sub_field('text_color');
+$background_image = get_sub_field('background_image');
+$repeat_image     = get_sub_field('repeat_image');
+$archive_link     = get_sub_field('archive_link');
 
 
 /**
@@ -65,6 +65,9 @@ if( $background_image ){
  
 if( $posts ): ?>
 	
+	<?php setup_postdata($post); ?>
+
+	
 	<section class="staff" style="<?php echo $background_color. $text_color . $background_image; ?>">
 		<div class="container">
 			
@@ -73,8 +76,10 @@ if( $posts ): ?>
 			<?php else : ?>
 				<h1>Our Staff</h1>
 			<?php endif; ?>
+
+
 			
-			<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+			<?php foreach( $posts as $post ) : // variable must be called $post (IMPORTANT) ?>
 				<?php setup_postdata($post); ?>
 				<div class="span4">
 					<img src="http://placehold.it/304x200&text=<?php the_title(); ?>" />
@@ -86,7 +91,7 @@ if( $posts ): ?>
 	</section>
 <?php else :  ?>
 
-	<section class="staff" style="width:100%; background:#333; color:#fff; background-image: url(http://energy.dev/wp-content/uploads/2013/09/reagan_work_marcus_price.jpeg);">
+	<section class="staff" style="width:100%; background:#333; color:#fff; background-image: url(/wp-content/uploads/2013/09/reagan_work_marcus_price.jpeg);">
 		<div class="container">
 			<h1>Our Team</h1>
 			<div class="span4">
