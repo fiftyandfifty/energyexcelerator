@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/fifty-framework-master"]
+	path = wp-content/themes/fifty-framework-master
+	url = https://github.com/fiftyandfifty/fifty-framework.git
