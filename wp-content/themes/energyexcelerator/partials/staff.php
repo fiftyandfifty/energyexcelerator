@@ -106,7 +106,7 @@ if( $posts ): ?>
 
 				<div class="staff-photo <?php echo $staff_grid_class; ?>">
 					<div class="staff-photo-overlay"></div>
-					<div class="staff-photo-thumb" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
+					<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
 						<?php  ?>
 					</div>
 					<h3><?php the_title(); ?></h3>
