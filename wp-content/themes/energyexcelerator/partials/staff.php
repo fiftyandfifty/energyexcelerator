@@ -1,3 +1,8 @@
+<style>
+	.staff h3{
+		text-align: center;
+	}
+</style>
 <?php 
 
 $posts            = get_sub_field('staff_members');
@@ -63,19 +68,10 @@ if( $posts ): ?>
 	<?php setup_postdata($post); ?>
 
 	<?php // get the container class (section_width ACF)	
-		$section_width = get_sub_field('section_width');
-	?>
+		$section_width = get_sub_field('section_width'); ?>
 	
-	<?php // get the number of posts and set the grid classes accordingly @TODO: refactor for container class & fourths
-		$post_count =  count($posts);
-
-		if ( $post_count == 2 && $post_count > 0 ) {
-			$staff_grid_class = 'box-half';
-		}
-		elseif ( $post_count >= 3 && $post_count > 0 ) {
-			$staff_grid_class = 'box-third';
-		}
-	?>
+	<?php // get the column box class by counting post objects
+		$staff_column_class = get_column_count_class(); ?>
 	
 	<section class="staff" style="<?php echo $background_color. $text_color . $background_image; ?>">
 		<div class="<?php echo $section_width; ?>">
@@ -86,24 +82,26 @@ if( $posts ): ?>
 				<h1>Our Staff</h1>
 			<?php endif; ?>
 				
-			
 			<?php foreach( $posts as $post ) : // variable must be called $post (IMPORTANT) ?>
-	
 
 				<?php // get featured image url if it exists, fallback to placeholder
 					if ( has_post_thumbnail() ) {
-					  $staff_photo_thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+					  $staff_photo_thumb_url = get_featured_image_url();
 					} else {
-						$staff_photo_thumb_url = 'http://placehold.it/304x200';
+						$staff_photo_thumb_url = 'http://placehold.it/304x200&text='.the_title().'';
 					}
 				 ?>
 
-				<div class="staff-photo <?php echo $staff_grid_class; ?>">
-					<div class="staff-photo-overlay"></div>
-					<div class="staff-photo-thumb bg-cover" style="background-image:url('<?php echo $staff_photo_thumb_url; ?>'')">
-						<?php  ?>
+				<div class="staff-photo <?php echo $staff_column_class; ?>">
+					<div class="staff-photo-overlay">
+						<div class="staff-photo-overlay-inner">
+							<h3><?php the_title(); ?></h3>
+						</div>
 					</div>
-					<h3><?php the_title(); ?></h3>
+					<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
+						<div class="staff-photo-content">
+						</div>
+					</div>
 				</div>
 
 		<?php endforeach; wp_reset_postdata(); ?>
@@ -112,7 +110,7 @@ if( $posts ): ?>
 	</section>
 <?php else :  ?>
 
-	<section class="staff">
+	<section class="staff" style="width:100%; background:#333; color:#fff; background-image: url(/wp-content/uploads/2013/09/reagan_work_marcus_price.jpeg);">
 		<div class="container">
 			<h1>Our Team</h1>
 			<div class="span4">
