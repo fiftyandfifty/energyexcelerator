@@ -68,19 +68,10 @@ if( $posts ): ?>
 	<?php setup_postdata($post); ?>
 
 	<?php // get the container class (section_width ACF)	
-		$section_width = get_sub_field('section_width');
-	?>
+		$section_width = get_sub_field('section_width'); ?>
 	
-	<?php // get the number of posts and set the grid classes accordingly @TODO: refactor for container class & fourths
-		$post_count =  count($posts);
-
-		if ( $post_count == 2 && $post_count > 0 ) {
-			$staff_grid_class = 'box-half';
-		}
-		elseif ( $post_count >= 3 && $post_count > 0 ) {
-			$staff_grid_class = 'box-third';
-		}
-	?>
+	<?php // get the column box class by counting post objects
+		$staff_column_class = get_column_count_class(); ?>
 	
 	<section class="staff" style="<?php echo $background_color. $text_color . $background_image; ?>">
 		<div class="<?php echo $section_width; ?>">
@@ -91,20 +82,17 @@ if( $posts ): ?>
 				<h1>Our Staff</h1>
 			<?php endif; ?>
 				
-			
 			<?php foreach( $posts as $post ) : // variable must be called $post (IMPORTANT) ?>
-	
 
 				<?php // get featured image url if it exists, fallback to placeholder
 					if ( has_post_thumbnail() ) {
-					  $staff_photo_thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+					  $staff_photo_thumb_url = get_featured_image_url();
 					} else {
 						$staff_photo_thumb_url = 'http://placehold.it/304x200&text='.the_title().'';
-						var_dump($staff_photo_thumb_url);
 					}
 				 ?>
 
-				<div class="staff-photo <?php echo $staff_grid_class; ?>">
+				<div class="staff-photo <?php echo $staff_column_class; ?>">
 					<div class="staff-photo-overlay"></div>
 					<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
 						<?php  ?>
