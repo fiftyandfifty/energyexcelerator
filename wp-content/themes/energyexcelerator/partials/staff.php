@@ -99,14 +99,13 @@ if( $posts ): ?>
 					if ( has_post_thumbnail() ) {
 					  $staff_photo_thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 					} else {
-						$staff_photo_thumb_url = 'http://placehold.it/304x200&text='.the_title().'';
-						var_dump($staff_photo_thumb_url);
+						$staff_photo_thumb_url = 'http://placehold.it/304x200&text='.get_the_title().'';
 					}
 				 ?>
 
 				<div class="staff-photo <?php echo $staff_grid_class; ?>">
 					<div class="staff-photo-overlay"></div>
-					<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
+					<div class="staff-photo-thumb bg-cover" style="background-image:url('<?php echo $staff_photo_thumb_url; ?>'')">
 						<?php  ?>
 					</div>
 					<h3><?php the_title(); ?></h3>
