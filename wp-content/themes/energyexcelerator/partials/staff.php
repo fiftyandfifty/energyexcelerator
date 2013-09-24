@@ -1,8 +1,3 @@
-<style>
-	.staff h3{
-		text-align: center;
-	}
-</style>
 <?php 
 
 $posts            = get_sub_field('staff_members');
@@ -67,11 +62,8 @@ if( $posts ): ?>
 	
 	<?php setup_postdata($post); ?>
 
-	<?php // get the container class (section_width ACF)	
-		$section_width = get_sub_field('section_width'); ?>
-	
-	<?php // get the column box class by counting post objects
-		$staff_column_class = get_column_count_class(); ?>
+	<?php $section_width = get_sub_field('section_width'); // get the container class (section_width ACF) ?>
+	<?php $staff_column_class = get_column_count_class(); // get the column box class by counting post objects ?>
 	
 	<section class="staff" style="<?php echo $background_color. $text_color . $background_image; ?>">
 		<div class="<?php echo $section_width; ?>">

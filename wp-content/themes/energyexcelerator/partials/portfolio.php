@@ -54,20 +54,8 @@ if( $background_image ){
 
 if( $posts ): ?>
 
-	<?php // get the container class (section_width ACF)	
-		$section_width = get_sub_field('section_width');
-	?>
-	
-	<?php // get the number of posts and set the grid classes accordingly @TODO: refactor for container class & fourths
-		$post_count =  count($posts);
-
-		if ( $post_count == 2 && $post_count > 0 ) {
-			$port_grid_class = 'box-half';
-		}
-		elseif ( $post_count >= 3 && $post_count > 0 ) {
-			$port_grid_class = 'box-third';
-		}
-	?>
+	<?php $section_width = get_sub_field('section_width'); // get the container class (section_width ACF) ?>
+	<?php $port_column_class = get_column_count_class(); // get the column box class by counting post objects ?>
 	
 	<section class="portfolio" style="<?php echo $background_color. $text_color . $background_image; ?>">
 		<div class="<?php echo $section_width; ?>">
@@ -83,13 +71,13 @@ if( $posts ): ?>
 			
 				<?php // get featured image url if it exists, fallback to placeholder
 					if ( has_post_thumbnail() ) {
-					  $port_photo_thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+					  $port_photo_thumb_url = get_featured_image_url();;
 					} else {
 						$port_photo_thumb_url = 'http://placehold.it/304x200';
 					}
 				 ?>
 
-				<div class="port-photo <?php echo $port_grid_class; ?>">
+				<div class="port-photo <?php echo $port_column_class; ?>">
 					<div class="port-photo-overlay"></div>
 					<div class="port-photo-thumb bg-cover" style="background-image:url('<?php echo $port_photo_thumb_url; ?>'')">
 						<?php  ?>
