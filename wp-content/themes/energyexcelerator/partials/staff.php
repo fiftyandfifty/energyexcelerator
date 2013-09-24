@@ -77,12 +77,12 @@ if( $posts ): ?>
 				<h1>Our Staff</h1>
 			<?php endif; ?>
 
-
 			
 			<?php foreach( $posts as $post ) : // variable must be called $post (IMPORTANT) ?>
 				<?php setup_postdata($post); ?>
 				<div class="span4">
-					<img src="http://placehold.it/304x200&text=<?php the_title(); ?>" />
+					<div class="staff-photo-overlay"></div>
+					<div class="staff-photo-thumb"></div>
 					<h3><?php the_title(); ?></h3>
 				</div>
 		<?php  endforeach; wp_reset_postdata(); ?>
