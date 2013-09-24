@@ -99,7 +99,7 @@ if( $posts ): ?>
 					if ( has_post_thumbnail() ) {
 					  $staff_photo_thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 					} else {
-						$staff_photo_thumb_url = 'http://placehold.it/304x200&text='.get_the_title().'';
+						$staff_photo_thumb_url = 'http://placehold.it/304x200';
 					}
 				 ?>
 

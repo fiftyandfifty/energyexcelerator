@@ -90,14 +90,9 @@ if( $posts ): ?>
 					if ( has_post_thumbnail() ) {
 					  $port_photo_thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 					} else {
-						$port_photo_thumb_url = 'http://placehold.it/304x200&text='.get_the_title().'';
+						$port_photo_thumb_url = 'http://placehold.it/304x200';
 					}
 				 ?>
-				
-				<div class="span4">
-					<img src="http://placehold.it/304x200&text=<?php the_title(); ?>" />
-					<h3><?php the_title(); ?></h3>
-				</div>
 
 				<div class="port-photo <?php echo $port_grid_class; ?>">
 					<div class="port-photo-overlay"></div>
