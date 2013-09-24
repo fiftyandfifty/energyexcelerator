@@ -5,14 +5,14 @@
  * A foundation off of which to build well-documented WordPress plugins that also follow
  * WordPress coding standards and PHP best practices.
  *
- * @package   Energy Excelerator Staff Post Type
+ * @package   Fifty & Fifty Framework Staff Post Type
  * @author    Fifty & Fifty <bryanm@fiftyandfifty.org>
  * @license   GPL-2.0+
  * @link      http://fiftyandfifty.org
  * @copyright 2013 Fifty and Fifty
  *
  * @wordpress-plugin
- * Plugin Name: Energy Excelerator Staff Post Type
+ * Plugin Name: Fifty & Fifty Framework Staff Post Type
  * Plugin URI:  http://fiftyandfifty.org
  * Description: Just a simple plugin to add the post type outside of the theme for portability.
  * Version:     1.0.0
