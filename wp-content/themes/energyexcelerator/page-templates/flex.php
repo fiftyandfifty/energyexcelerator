@@ -29,7 +29,6 @@ get_header(); ?>
 
 	<?php while( has_sub_field( 'sections', $post->ID ) ) : ?>
 
-		
 		<?php if( get_row_layout() == 'blog_layout') : ?>
 			<?php get_template_part( 'partials/blog', 'index' ); ?>
 		<?php endif; ?>
@@ -46,10 +45,14 @@ get_header(); ?>
 			<?php get_template_part( 'partials/page', 'external' ); ?>
 		<?php endif; ?>
 
+		<?php if( get_row_layout() == 'general_use') : ?>
+			<?php get_template_part( 'partials/general', 'use' ); ?>
+		<?php endif; ?>
+
 	<?php endwhile; ?>
 
 	<?php 
-	//Conditional checking if the user wants the page content "Below" ::case sensitive
+	//Conditional checking if the user wants the page content "Below" ::case sen2itive
 	if( $page_content_location == 'Below') : ?>
 		<?php get_template_part( 'partials/page', 'index' ); ?>
 	<?php endif; ?>
