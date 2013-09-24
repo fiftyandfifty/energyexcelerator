@@ -14,6 +14,11 @@ $repeat_image		= get_sub_field('repeat_image');
 $archive_link		= get_sub_field('archive_link');
 
 
+/**
+This sections needs to be refactored into a function like ffw_the_section_style(); so the template isn't so messy.
+*
+*/
+
 //Set background Color
 if( $background_color ){
 	$background_color = "background-color:" . $background_color . "; ";

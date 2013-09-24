@@ -4,11 +4,26 @@ Template Name: Flexible Template
 */
 get_header(); ?>
 
-<?php do_action('FFW_slider_full', array(
-	'id'       => 'slider_full_header',
-	'class'    => 'slider-full',
-	'category' => 'home'
-)); ?>
+<?php 
+
+//Set true/false field to variable
+$show_slider = get_field('show_slider');  
+
+//Check if true
+if( $show_slider ){
+
+	//Set variable to the tax object
+	$slide_cat = get_field('slide_category');
+
+	//Run Slider action
+	do_action('FFW_slider_full', array(
+		'id'       => 'slider_full_header',
+		'class'    => 'slider-full',
+		'category' => $slide_cat->slug
+	));
+}
+
+?>
 
 <style>
 .span4 img {
