@@ -61,7 +61,7 @@ if( $background_image ){
 if( $posts ): ?>
 	
 	<?php setup_postdata($post); ?>
- 
+
 	<?php $section_width = get_sub_field('section_width'); // get the container class (section_width ACF) ?>
 	<?php $staff_column_class = get_column_count_class(); // get the column box class by counting post objects ?>
 	
