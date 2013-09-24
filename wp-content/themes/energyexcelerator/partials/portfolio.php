@@ -1,9 +1,4 @@
-<style>
-	.portfolio h3{
-		text-align: center;
-	}
-</style>
-<?php 
+<?php
 
 $posts            = get_sub_field('portfolio_items');
 $section_title    = get_sub_field('section_title'); 

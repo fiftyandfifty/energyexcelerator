@@ -1,8 +1,3 @@
-<style>
-	.staff h3{
-		text-align: center;
-	}
-</style>
 <?php 
 
 $posts            = get_sub_field('staff_members');
