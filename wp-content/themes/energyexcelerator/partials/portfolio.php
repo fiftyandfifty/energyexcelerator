@@ -1,9 +1,4 @@
-<style>
-	.portfolio h3{
-		text-align: center;
-	}
-</style>
-<?php 
+<?php
 
 $posts            = get_sub_field('portfolio_items');
 $section_title    = get_sub_field('section_title'); 
@@ -58,28 +53,57 @@ if( $background_image ){
 
 
 if( $posts ): ?>
+
+	<?php // get the container class (section_width ACF)	
+		$section_width = get_sub_field('section_width');
+	?>
+	
+	<?php // get the number of posts and set the grid classes accordingly @TODO: refactor for container class & fourths
+		$post_count =  count($posts);
+
+		if ( $post_count == 2 && $post_count > 0 ) {
+			$port_grid_class = 'box-half';
+		}
+		elseif ( $post_count >= 3 && $post_count > 0 ) {
+			$port_grid_class = 'box-third';
+		}
+	?>
 	
 	<section class="portfolio" style="<?php echo $background_color. $text_color . $background_image; ?>">
-		<div class="container">
+		<div class="<?php echo $section_width; ?>">
+
 			<?php if( $section_title ) : ?>
 				<h1><?php the_sub_field('section_title'); ?></h1>
+			
 			<?php else : ?>
 				<h1>Our Portfolio</h1>
 			<?php endif; ?>
 
 			<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-			<?php setup_postdata($post);  ?>
-			<div class="span4">
-				<img src="http://placehold.it/304x200&text=<?php the_title(); ?>" />
-				<h3><?php the_title(); ?></h3>
-			</div>
-		<?php endforeach; wp_reset_postdata(); ?>
+			
+				<?php // get featured image url if it exists, fallback to placeholder
+					if ( has_post_thumbnail() ) {
+					  $port_photo_thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+					} else {
+						$port_photo_thumb_url = 'http://placehold.it/304x200';
+					}
+				 ?>
+
+				<div class="port-photo <?php echo $port_grid_class; ?>">
+					<div class="port-photo-overlay"></div>
+					<div class="port-photo-thumb bg-cover" style="background-image:url('<?php echo $port_photo_thumb_url; ?>'')">
+						<?php  ?>
+					</div>
+					<h3><?php the_title(); ?></h3>
+				</div>
+
+			<?php endforeach; wp_reset_postdata(); ?>
 			<?php if( $archive_link) : ?><a href="/portfolio" class="button"><?php the_sub_field('archive_text'); ?></a><?php endif; ?>
 		</div>
 	</section>
 <?php else :  ?>
 
-	<section class="staff" style="width:100%; background:#333; color:#fff; background-image: url(/wp-content/uploads/2013/09/reagan_work_marcus_price.jpeg);">
+	<section class="portfolio">
 		<div class="container">
 			<h1>Our Portfolio</h1>
 			<div class="span4">
