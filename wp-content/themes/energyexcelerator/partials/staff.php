@@ -88,7 +88,7 @@ if( $posts ): ?>
 					if ( has_post_thumbnail() ) {
 					  $staff_photo_thumb_url = get_featured_image_url();
 					} else {
-						$staff_photo_thumb_url = 'http://placehold.it/304x200&text='.the_title().'';
+						$staff_photo_thumb_url = 'http://placehold.it/304x200	';
 					}
 				 ?>
 
