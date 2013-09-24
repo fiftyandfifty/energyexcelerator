@@ -93,11 +93,13 @@ if( $posts ): ?>
 				 ?>
 
 				<div class="staff-photo <?php echo $staff_column_class; ?>">
-					<div class="staff-photo-overlay"></div>
-					<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
-						<?php  ?>
+					<div class="staff-photo-overlay">
+						<h3><?php the_title(); ?></h3>
 					</div>
-					<h3><?php the_title(); ?></h3>
+					<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
+						<div class="staff-photo-content">
+						</div>
+					</div>
 				</div>
 
 		<?php endforeach; wp_reset_postdata(); ?>
