@@ -117,7 +117,7 @@ if( $posts ): ?>
 	</section>
 <?php else :  ?>
 
-	<section class="staff" style="width:100%; background:#333; color:#fff; background-image: url(/wp-content/uploads/2013/09/reagan_work_marcus_price.jpeg);">
+	<section class="staff">
 		<div class="container">
 			<h1>Our Team</h1>
 			<div class="span4">
