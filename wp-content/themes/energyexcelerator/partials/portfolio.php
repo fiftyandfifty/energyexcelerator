@@ -80,8 +80,10 @@ if( $posts ): ?>
 				<div class="port-photo <?php echo $port_column_class; ?>">
 					<div class="port-photo-overlay">
 						<div class="port-photo-overlay-inner">
+							<a href="<?php the_permalink(); ?>">
 							<h3><?php the_title(); ?></h3>
 							<?php the_content(); ?>
+							</a>
 						</div>
 					</div>
 					<div class="port-photo-thumb bg-cover" style="background-image:url('<?php echo $port_photo_thumb_url; ?>')">

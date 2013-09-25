@@ -1,14 +1,23 @@
+
+
 <?php get_header(); ?>
 
-<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-	<div style="border-bottom:1px solid #efefef; margin-bottom:30px; padding-bottom:10px;">
-		<h1><?php the_title(); ?></h1>
-		<?php the_content(); ?>
-	</div>
-<?php endwhile; else : ?>
-	<h1>No nstaff yet</h1>
+<?php do_action('FFW_hero_before'); ?>
+<?php do_action('FFW_hero'); ?>
+<?php do_action('FFW_hero_after'); ?>
 
+<div id="main" class="page page-default default">
+  <div class="container">  
+    <div id="content" class="full-width">
+      <div class="content-inner">
+        
+        <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+          <?php get_template_part( 'loop/loop', get_post_format() ); ?>
+        <?php endwhile; endif; ?>
 
-<?php endif; ?>
+      </div><!-- .content-inner -->
+    </div><!-- #content -->
+  </div><!-- .container -->
+</div><!-- #main -->
 
 <?php get_footer(); ?>
