@@ -8,3 +8,8 @@ Template:       fifty-framework-master
 */
 
 @import url("../fifty-framework-master/style.css");
+
+section{
+	text-align: center;
+	padding:50px auto;
+}
