@@ -11,5 +11,6 @@ Template:       fifty-framework-master
 
 section{
 	text-align: center;
-	padding:50px auto;
+	/*min-height:300px;*/
+	padding:100px 0;
 }
