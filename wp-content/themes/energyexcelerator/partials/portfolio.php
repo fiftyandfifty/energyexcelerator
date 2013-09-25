@@ -71,15 +71,15 @@ if( $posts ): ?>
 			
 				<?php // get featured image url if it exists, fallback to placeholder
 					if ( has_post_thumbnail() ) {
-					  $port_photo_thumb_url = get_featured_image_url();;
+					 	$port_photo_thumb_url = get_featured_image_url();;
 					} else {
-						$port_photo_thumb_url = 'http://placehold.it/304x200';
+						$port_photo_thumb_url = 'http://www.placehold.it/304x200';
 					}
 				 ?>
 
 				<div class="port-photo <?php echo $port_column_class; ?>">
 					<div class="port-photo-overlay"></div>
-					<div class="port-photo-thumb bg-cover" style="background-image:url('<?php echo $port_photo_thumb_url; ?>'')">
+					<div class="port-photo-thumb bg-cover" style="background-image:url('<?php echo $port_photo_thumb_url; ?>')">
 						<?php  ?>
 					</div>
 					<h3><?php the_title(); ?></h3>
