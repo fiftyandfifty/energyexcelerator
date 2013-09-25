@@ -38,6 +38,6 @@
 <section style="<?php echo $background_color. $text_color . $background_image; ?>">
 	<div class="container">
 		<h1><?php the_title(); ?></h1>
-		<?php the_content(); ?>
+		<?php the_excerpt(); ?>
 	</div>
 </section>
