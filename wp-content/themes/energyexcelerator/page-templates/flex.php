@@ -25,12 +25,6 @@ if( $show_slider ){
 
 ?>
 
-<style>
-.span4 img {
-	padding-right: 3px;
-}
-</style>
-
 
 	<?php 
 	//set $page_content_location to meta field variable
