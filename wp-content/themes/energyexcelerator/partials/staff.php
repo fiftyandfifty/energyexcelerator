@@ -75,7 +75,7 @@ if( $posts ): ?>
 			<?php endif; ?>
 				
 			<?php foreach( $posts as $post ) : // variable must be called $post (IMPORTANT) ?>
-
+					<?php setup_postdata($post); ?>
 				<?php // get featured image url if it exists, fallback to placeholder
 					if ( has_post_thumbnail() ) {
 					  $staff_photo_thumb_url = get_featured_image_url();
@@ -88,6 +88,7 @@ if( $posts ): ?>
 					<div class="staff-photo-overlay">
 						<div class="staff-photo-overlay-inner">
 							<h3><?php the_title(); ?></h3>
+							<?php the_content(); ?>
 						</div>
 					</div>
 					<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
