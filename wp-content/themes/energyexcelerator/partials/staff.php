@@ -2,6 +2,7 @@
 
 $posts            = get_sub_field('staff_members');
 $section_title    = get_sub_field('section_title'); 
+$section_subtitle = get_sub_field('section_subtitle');
 $background_color = get_sub_field('background_color'); 
 $text_color       = get_sub_field('text_color');
 $background_image = get_sub_field('background_image');
@@ -73,6 +74,10 @@ if( $posts ): ?>
 			<?php else : ?>
 				<h1>Our Staff</h1>
 			<?php endif; ?>
+			<?php if( $section_subtitle ) : ?>
+				<p><?php the_sub_field('section_subtitle'); ?></p>
+			<?php endif; ?>
+
 				
 			<?php foreach( $posts as $post ) : // variable must be called $post (IMPORTANT) ?>
 					<?php setup_postdata($post); ?>

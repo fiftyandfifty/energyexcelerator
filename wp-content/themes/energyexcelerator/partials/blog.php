@@ -1,5 +1,7 @@
 <?php
 
+$section_title    = get_sub_field('section_title'); 
+$section_subtitle = get_sub_field('section_subtitle');
 $ppp = get_sub_field('number_posts');
 
 $blog_args = array(
@@ -12,6 +14,16 @@ $blog_query = new WP_Query( $blog_args ); ?>
 <?php if( $blog_query->have_posts() ) : ?>
 <div id="main" class="default blog">
 	<div class="container">
+		<?php if( $section_title ) : ?>
+			<h1><?php the_sub_field('section_title'); ?></h1>
+		<?php else : ?>
+			<h1>From our Blog</h1>
+		<?php endif; ?>
+		
+		<?php if( $section_subtitle ) : ?>
+			<p><?php the_sub_field('section_subtitle'); ?></p>
+		<?php endif; ?>
+
 
 		<div class="sidebar push-<?php sidebar_position_class(); ?>">
 			<?php get_sidebar(); ?>
