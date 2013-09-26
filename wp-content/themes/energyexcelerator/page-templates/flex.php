@@ -38,6 +38,10 @@ if( $show_slider ){
 
 	<?php while( has_sub_field( 'sections', $post->ID ) ) : ?>
 
+		<?php if( get_row_layout() == 'slider_layout') : ?>
+			<?php get_template_part( 'partials/slider', 'index' ); ?>
+		<?php endif; ?>
+
 		<?php if( get_row_layout() == 'blog_layout') : ?>
 			<?php get_template_part( 'partials/blog', 'index' ); ?>
 		<?php endif; ?>
