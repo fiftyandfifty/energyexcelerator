@@ -14,7 +14,7 @@
  * @wordpress-plugin
  * Plugin Name: Fifty & Fifty Framework Event Post Type
  * Plugin URI:  http://fiftyandfifty.org
- * Description: Just a simple plugin to add the post type outside of the theme for portability.
+ * Description: Simple event functionality.
  * Version:     1.0.0
  * Author:      Fifty & Fifty
  * Author URI:  http://fiftyandfifty.org
