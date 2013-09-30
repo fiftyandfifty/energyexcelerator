@@ -35,7 +35,7 @@ define( 'FFW_PORT_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 define( 'FFW_PORT_PLUGIN_PATH', plugin_dir_path(__FILE__) );
 define( 'FFW_PORT_PLUGIN_BASENAME', plugin_basename(__FILE__));
 
-require_once( FFW_PORT_PLUGIN_PATH . '/lib/posttypes.php');
+require_once( FFW_PORT_PLUGIN_PATH . '/lib/posttypes-new.php');
 require_once( FFW_PORT_PLUGIN_PATH . '/lib/taxonomies.php');
 require_once( FFW_PORT_PLUGIN_PATH . '/lib/shortcodes.php');
 require_once( FFW_PORT_PLUGIN_PATH . '/lib/widgets.php');
