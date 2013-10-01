@@ -4,8 +4,8 @@
 	$text_color 		= get_sub_field('text_color');
 	$background_image 	= get_sub_field('background_image');
 	$repeat_image		= get_sub_field('repeat_image');
-	$section_width = get_sub_field('section_width'); // get the container class (section_width ACF)
-
+	$section_width 		= get_sub_field('section_width'); // get the container class (section_width ACF)
+	$section_padding  	= get_sub_field('section_padding');
 	
 
 	if( $background_color ){
@@ -37,8 +37,12 @@
 		$background_image = "background-image:url(" . $background_image . "); " . $repeat;
 
 	}
+
+	if( $section_padding ){
+		$section_padding = 'padding:' . $section_padding . 'px 0; ';
+	}
  ?>
-<section style="<?php echo $background_color. $text_color . $background_image; ?>">
+<section style="<?php echo $background_color. $text_color . $background_image . $section_padding; ?>">
 	<div class="<?php echo $section_width; ?>">
 		<?php echo $section_content; ?>
 	</div>
