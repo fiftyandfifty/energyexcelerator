@@ -17,3 +17,18 @@ section{
 #content.full-width{
 	width:100% !important;
 }
+
+
+/* * * * * * * * * * * *
+Gravity Form Styles
+* * * * * * * * * * *  */
+
+.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+	background: #ff9999;
+	background: rgba(255, 153, 153, 0.28);
+	border: 1px solid #FDA4A4;
+}
+
+.gform_wrapper li.gfield_error input[type=text], .gform_wrapper li.gfield_error input[type=url], .gform_wrapper li.gfield_error input[type=email], .gform_wrapper li.gfield_error input[type=tel], .gform_wrapper li.gfield_error input[type=number], .gform_wrapper li.gfield_error input[type=password], .gform_wrapper li.gfield_error textarea {
+	border:1px solid #FDA4A4;
+}
