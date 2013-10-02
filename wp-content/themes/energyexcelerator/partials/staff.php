@@ -77,14 +77,28 @@ if( $posts ): ?>
 
 				
 			<?php foreach( $posts as $post ) : // variable must be called $post (IMPORTANT) ?>
+					
 					<?php setup_postdata($post); ?>
-				<?php // get featured image url if it exists, fallback to placeholder
+				
+					<?php
+
+					// get featured image url if it exists, fallback to placeholder
 					if ( has_post_thumbnail() ) {
-					  $staff_photo_thumb_url = get_featured_image_url('ffw-grid');
+					  	
+					  	$staff_photo_thumb_url = get_featured_image_url( array(
+					  			'post_id'		=> $post->ID,
+					  			'image_size'	=> 'ffw-grid'
+					  		)
+					  	);
+
 					} else {
-						$staff_photo_thumb_url = 'http://placehold.it/304x200	';
+						
+						//@TODO: Replace with a designed placeholder.
+						$staff_photo_thumb_url = 'http://placehold.it/304x200';
+
 					}
-				 ?>
+
+				 	?>
 
 				<div class="staff-photo <?php echo $staff_column_class; ?>">
 					<div class="staff-photo-overlay">
@@ -101,8 +115,8 @@ if( $posts ): ?>
 					</div>
 				</div>
 
-		<?php endforeach; wp_reset_postdata(); ?>
-		<?php if( $archive_link) : ?><a href="/staff" class="button"><?php the_sub_field('archive_text'); ?></a><?php endif; ?>
+			<?php endforeach; wp_reset_postdata(); ?>
+			<?php if( $archive_link ) : ?><a href="/staff" class="button"><?php the_sub_field('archive_text'); ?></a><?php endif; ?>
 		</div>
 	</section>
 <?php else :  ?>
