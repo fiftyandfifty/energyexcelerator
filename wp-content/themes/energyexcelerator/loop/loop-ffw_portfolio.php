@@ -9,7 +9,7 @@
 
     <?php $company_url = get_field('company_url'); ?>
     <?php if( $company_url ) : ?>
-    <a href="<?php echo $company_url; ?>" class="btn btn-tab icon-globe">Visit Website</a>
+    <a href="<?php echo $company_url; ?>" class="btn btn-tab icon-globe" style="margin-top:20px;">Visit Website</a>
 	<?php endif; ?>
   </div>
   <footer></footer>
