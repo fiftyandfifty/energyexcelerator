@@ -1,6 +1,12 @@
 <?php
-define( 'FFW_STAFF_SLUG', 'people' );
-defined( 'FFW_STAFF_DISABLE_ARCHIVE', false );
+
+if( !defined('FFW_STAFF_SLUG'){
+	define( 'FFW_STAFF_SLUG', 'people' );
+}
+
+if ( ! defined( 'FFW_STAFF_DISABLE_ARCHIVE' ) ){
+    define( 'FFW_STAFF_DISABLE_ARCHIVE', true );
+}
 
 function ee_staff_labels( $labels ) {
 	$labels = array(
