@@ -4,6 +4,6 @@
 add_filter("gform_submit_button", "form_submit_button", 10, 2);
 function form_submit_button($button, $form){
 
-    return "<button class='btn btn-tab icon-write' id='gform_submit_button_{$form["id"]}'>{$form["button"]["text"]}</button>";
+    return "<button class='btn secondary' id='gform_submit_button_{$form["id"]}'>{$form["button"]["text"]}</button>";
 
 }
