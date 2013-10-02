@@ -1,6 +1,6 @@
 <?php
 
-if( !defined('FFW_STAFF_SLUG'){
+if( !defined('FFW_STAFF_SLUG') ){
 	define( 'FFW_STAFF_SLUG', 'people' );
 }
 
