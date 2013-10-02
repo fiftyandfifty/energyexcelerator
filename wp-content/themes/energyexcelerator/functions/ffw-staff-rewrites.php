@@ -1,5 +1,6 @@
 <?php
 define( 'FFW_STAFF_SLUG', 'people' );
+defined( 'FFW_STAFF_DISABLE_ARCHIVE', false );
 
 function ee_staff_labels( $labels ) {
 	$labels = array(
