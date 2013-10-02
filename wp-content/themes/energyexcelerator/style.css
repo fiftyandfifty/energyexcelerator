@@ -70,3 +70,7 @@ Gravity Form Styles
 .ginput_complex span label {
 	padding-bottom: 15px;
 }
+
+.gform_wrapper .gfield_time_ampm select, .gfield_select{
+	height:44px;
+}
