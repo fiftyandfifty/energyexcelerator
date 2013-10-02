@@ -35,3 +35,17 @@ Gravity Form Styles
 .gform_wrapper li.gfield_error input[type=text], .gform_wrapper li.gfield_error input[type=url], .gform_wrapper li.gfield_error input[type=email], .gform_wrapper li.gfield_error input[type=tel], .gform_wrapper li.gfield_error input[type=number], .gform_wrapper li.gfield_error input[type=password], .gform_wrapper li.gfield_error textarea {
 	border:1px solid #FDA4A4;
 }
+
+/* Margin between <li>s */
+.gform_wrapper ul li.gfield {
+	margin-bottom: 30px;
+}
+
+/* Prevent Radio buttons from being cutoff */
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox], .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio], .gform_wrapper.gf_browser_chrome .gfield_checkbox li input{
+	margin-left:1px;
+}
+
+.gform_wrapper .gfield_description{
+	padding-top:3px;
+}
