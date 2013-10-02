@@ -38,7 +38,7 @@ Gravity Form Styles
 
 /* Margin between <li>s */
 .gform_wrapper ul li.gfield {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 
 /* Prevent Radio buttons from being cutoff */
@@ -64,4 +64,9 @@ Gravity Form Styles
 /* Input padding */
 .gform_wrapper input[type=text], .gform_wrapper input[type=url], .gform_wrapper input[type=email], .gform_wrapper input[type=tel], .gform_wrapper input[type=number], .gform_wrapper input[type=password]{
 	padding-left:10px;
+}
+
+/* complex forms like address fields need more spacing */
+.ginput_complex span label {
+	padding-bottom: 15px;
 }
