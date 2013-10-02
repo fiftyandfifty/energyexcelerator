@@ -89,8 +89,10 @@ if( $posts ): ?>
 				<div class="staff-photo <?php echo $staff_column_class; ?>">
 					<div class="staff-photo-overlay">
 						<div class="staff-photo-overlay-inner">
-							<h3><?php the_title(); ?></h3>
-							<?php the_content(); ?>
+							<a href="<?php the_permalink(); ?>" style="display:block;">
+								<h3><?php the_title(); ?></h3>
+								<?php the_content(); ?>
+							</a>
 						</div>
 					</div>
 					<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
