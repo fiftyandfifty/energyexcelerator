@@ -7,8 +7,14 @@
 <?php do_action('FFW_hero_after'); ?>
 
 <div id="main" class="page page-default default">
-  <div class="container">  
-    <div id="content" class="full-width">
+	
+	<div id="sidebar-default" class="sidebar collapsable collapsed push-<?php sidebar_position_class(); ?>">
+	  <div id="sidebar-toggle"></div>
+	  <?php get_sidebar(); ?>
+	</div><!-- #sidebar -->
+    
+    <div id="content" class="push-<?php sidebar_position_class(); ?>">
+
       <div class="content-inner">
         
         <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
