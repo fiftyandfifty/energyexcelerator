@@ -46,6 +46,22 @@ Gravity Form Styles
 	margin-left:1px;
 }
 
+/* Pull description span closer to field */
 .gform_wrapper .gfield_description{
 	padding-top:3px;
+}
+
+/* Text area padding */
+.gform_wrapper .top_label input.large, .gform_wrapper .top_label select.large, .gform_wrapper .top_label textarea.textarea {
+	padding:10px;
+}
+
+/* Align time colon (3:00) to the middle */
+.gform_wrapper .gfield_time_hour, .gform_wrapper .gfield_time_minute, .gform_wrapper .gfield_date_month, .gform_wrapper .gfield_date_day, .gform_wrapper .gfield_date_year{
+	vertical-align: middle;
+}
+
+/* Input padding */
+.gform_wrapper input[type=text], .gform_wrapper input[type=url], .gform_wrapper input[type=email], .gform_wrapper input[type=tel], .gform_wrapper input[type=number], .gform_wrapper input[type=password]{
+	padding-left:10px;
 }
