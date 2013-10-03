@@ -79,7 +79,7 @@ if( $posts ): ?>
 					if ( has_post_thumbnail() ) {
 					 	$port_photo_thumb_url = get_featured_image_url();;
 					} else {
-						$port_photo_thumb_url = 'http://www.placehold.it/304x200';
+						$port_photo_thumb_url = 'http://www.placehold.it/600';
 					}
 				 ?>
 

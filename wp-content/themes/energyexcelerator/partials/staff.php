@@ -94,7 +94,7 @@ if( $posts ): ?>
 					} else {
 						
 						//@TODO: Replace with a designed placeholder.
-						$staff_photo_thumb_url = 'http://placehold.it/304x200';
+						$staff_photo_thumb_url = 'http://placehold.it/600';
 
 					}
 
