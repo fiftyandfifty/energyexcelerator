@@ -75,48 +75,51 @@ if( $posts ): ?>
 				<p><?php the_sub_field('section_subtitle'); ?></p>
 			<?php endif; ?>
 
-				
-			<?php foreach( $posts as $post ) : // variable must be called $post (IMPORTANT) ?>
-					
-					<?php setup_postdata($post); ?>
-				
-					<?php
-
-					// get featured image url if it exists, fallback to placeholder
-					if ( has_post_thumbnail() ) {
-					  	
-					  	$staff_photo_thumb_url = get_featured_image_url( array(
-					  			'post_id'		=> $post->ID,
-					  			'image_size'	=> 'ffw-grid	'
-					  		)
-					  	);
-
-					} else {
+			<div class="row">
+				<?php foreach( $posts as $post ) : // variable must be called $post (IMPORTANT) ?>
 						
-						//@TODO: Replace with a designed placeholder.
-						$staff_photo_thumb_url = 'http://placehold.it/600';
+						<?php setup_postdata($post); ?>
+					
+						<?php
 
-					}
+						// get featured image url if it exists, fallback to placeholder
+						if ( has_post_thumbnail() ) {
+						  	
+						  	$staff_photo_thumb_url = get_featured_image_url( array(
+						  			'post_id'		=> $post->ID,
+						  			'image_size'	=> 'ffw-grid	'
+						  		)
+						  	);
 
-				 	?>
+						} else {
+							
+							//@TODO: Replace with a designed placeholder.
+							$staff_photo_thumb_url = 'http://placehold.it/600';
 
-				<div class="staff-photo <?php echo $staff_column_class; ?>">
-					<div class="staff-photo-overlay">
-						<div class="staff-photo-overlay-inner">
-							<a href="<?php the_permalink(); ?>" style="display:block;">
-								<h3><?php the_title(); ?></h3>
-								<?php the_content(); ?>
-							</a>
+						}
+
+					 	?>
+
+					<div class="staff-photo <?php echo $staff_column_class; ?>">
+						<div class="staff-photo-overlay">
+							<div class="staff-photo-overlay-inner">
+								<a href="<?php the_permalink(); ?>" style="display:block;">
+									<h3><?php the_title(); ?></h3>
+									<?php the_content(); ?>
+								</a>
+							</div>
+						</div>
+						<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
+							<div class="staff-photo-content">
+							</div>
 						</div>
 					</div>
-					<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
-						<div class="staff-photo-content">
-						</div>
-					</div>
-				</div>
 
-			<?php endforeach; wp_reset_postdata(); ?>
-			<?php if( $archive_link ) : ?><a href="/staff" class="button"><?php the_sub_field('archive_text'); ?></a><?php endif; ?>
+				<?php endforeach; wp_reset_postdata(); ?>
+			</div>
+			<div class="row">
+				<?php if( $archive_link ) : ?><a href="/staff" class="button"><?php the_sub_field('archive_text'); ?></a><?php endif; ?>
+			</div>
 		</div>
 	</section>
 <?php else :  ?>

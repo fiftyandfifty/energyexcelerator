@@ -72,7 +72,7 @@ if( $posts ): ?>
 			<?php endif; ?>
 
 
-
+			<div class="row">
 			<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 				<?php setup_postdata($post); ?>
 				<?php // get featured image url if it exists, fallback to placeholder
@@ -82,7 +82,6 @@ if( $posts ): ?>
 						$port_photo_thumb_url = 'http://www.placehold.it/600';
 					}
 				 ?>
-
 				<div class="port-photo <?php echo $port_column_class; ?>">
 					<div class="port-photo-overlay">
 						<div class="port-photo-overlay-inner">
@@ -98,9 +97,11 @@ if( $posts ): ?>
 					</div>
 					<h3><?php the_title(); ?></h3>
 				</div>
-
 			<?php endforeach; wp_reset_postdata(); ?>
-			<?php if( $archive_link) : ?><a href="/portfolio" class="button"><?php the_sub_field('archive_text'); ?></a><?php endif; ?>
+			</div>
+			<div class="row">
+			<?php if( $archive_link) : ?><a href="/portfolio" class="btn"><?php the_sub_field('archive_text'); ?></a><?php endif; ?>
+			</div>
 		</div>
 	</section>
 <?php else :  ?>

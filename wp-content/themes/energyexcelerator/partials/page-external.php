@@ -6,7 +6,8 @@ $section_width 		= get_sub_field('section_width'); // get the container class (s
 $background_color 	= get_sub_field('background_color'); 
 $text_color 		= get_sub_field('text_color');
 $background_image 	= get_sub_field('background_image');
-$repeat_image		= get_sub_field('repeat_image'); 
+$repeat_image		= get_sub_field('repeat_image');
+$archive_link		= get_sub_field('archive_link');
  
 	if( $background_color ){
 		$background_color = "background-color:" . $background_color . "; ";
@@ -50,8 +51,13 @@ if( $page_query->have_posts() ) : while( $page_query->have_posts() ) : $page_que
 
 <section style="<?php echo $background_color. $text_color . $background_image; ?>">
 	<div class="<?php echo $section_width; ?>">
-		<h1><?php the_title(); ?></h1>
-		<?php the_excerpt(); ?>
+		<div class="row">
+			<h1><?php the_title(); ?></h1>
+			<?php the_excerpt(); ?>
+		</div>
+		<div class="row">
+			<?php if( $archive_link) : ?><a href="<?php the_sub_field('page_link'); ?>" class="btn"><?php the_sub_field('archive_text'); ?></a><?php endif; ?>
+		</div>
 	</div>
 </section>
 
