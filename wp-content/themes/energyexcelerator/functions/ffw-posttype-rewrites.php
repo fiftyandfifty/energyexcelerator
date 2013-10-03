@@ -8,6 +8,10 @@ if ( ! defined( 'FFW_STAFF_DISABLE_ARCHIVE' ) ){
     define( 'FFW_STAFF_DISABLE_ARCHIVE', true );
 }
 
+if ( ! defined( 'FFW_PORTFOLIO_DISABLE_ARCHIVE' ) ){
+    define( 'FFW_PORTFOLIO_DISABLE_ARCHIVE', true );
+}
+
 function ee_staff_labels( $labels ) {
 	$labels = array(
 	   'singular' => __('Person', 'your-domain'),
