@@ -6,7 +6,7 @@
 
     <div id="sidebar-default" class="sidebar collapsable collapsed push-<?php sidebar_position_class(); ?>">
       <div id="sidebar-toggle"></div>
-      <?php get_sidebar( 'ffw_portfolio' ); ?>
+      <?php get_sidebar( 'ffw_staff' ); ?>
     </div><!-- #sidebar -->
     
     <div id="content" class="push-<?php sidebar_position_class(); ?>">
