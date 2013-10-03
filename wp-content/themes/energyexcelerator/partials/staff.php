@@ -87,7 +87,7 @@ if( $posts ): ?>
 						  	
 						  	$staff_photo_thumb_url = get_featured_image_url( array(
 						  			'post_id'		=> $post->ID,
-						  			'image_size'	=> 'ffw-grid	'
+						  			'image_size'	=> 'ffw-grid'
 						  		)
 						  	);
 
