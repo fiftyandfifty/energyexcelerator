@@ -8,5 +8,6 @@ _svn
 .settings
 *.komodoproject
 .sass_cache/
+wp-config.php
 /wp-content/themes/*/.sass-cache/
 /wp-content/uploads/
