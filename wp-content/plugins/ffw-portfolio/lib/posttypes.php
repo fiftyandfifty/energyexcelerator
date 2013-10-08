@@ -143,12 +143,13 @@ function ffw_port_setup_portfolio_taxonomies() {
 	);
 
 	$category_args = apply_filters( 'ffw_port_category_args', array(
-			'hierarchical' 	=> true,
-			'labels' 		=> apply_filters('ffw_port_category_labels', $category_labels),
-			'show_ui' 		=> true,
-			'query_var' 	=> 'portfolio_category',
-			'rewrite' 		=> array('slug' => $slug . '/category', 'with_front' => false, 'hierarchical' => true ),
-			'capabilities'  => array( 'manage_terms', 'edit_terms','assign_terms', 'delete_terms' )
+			'hierarchical' 		=> true,
+			'labels' 			=> apply_filters('ffw_port_category_labels', $category_labels),
+			'show_ui' 			=> true,
+			'query_var' 		=> 'portfolio_category',
+			'rewrite' 			=> array('slug' => $slug . '/category', 'with_front' => false, 'hierarchical' => true ),
+			'capabilities'  	=> array( 'manage_terms', 'edit_terms','assign_terms', 'delete_terms' ),
+			'show_admin_column'	=> true
 		)
 	);
 	register_taxonomy( 'portfolio_category', array('ffw_portfolio'), $category_args );
