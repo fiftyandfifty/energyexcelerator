@@ -26,7 +26,7 @@
       <div class="content-inner">
         
         <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-          
+        	
           <article class="post post-<?php echo get_the_ID(); ?>">
             <header>
               <h1 class="post-title">
