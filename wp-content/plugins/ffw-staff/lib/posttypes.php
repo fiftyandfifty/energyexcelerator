@@ -54,6 +54,7 @@ function setup_ffw_staff_post_types() {
 		'rewrite' 			=> $rewrite,
 		'map_meta_cap'      => true,
 		'has_archive' 		=> $archives,
+		'show_in_nav_menus'	=> true,
 		'hierarchical' 		=> false,
 		'supports' 			=> apply_filters( 'ffw_staff_supports', array( 'title', 'editor', 'thumbnail', 'excerpt' ) ),
 	);

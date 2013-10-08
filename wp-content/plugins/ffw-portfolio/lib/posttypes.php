@@ -52,6 +52,7 @@ function setup_ffw_port_post_types() {
 		'show_in_menu' 		=> true,
 		'query_var' 		=> true,
 		'rewrite' 			=> $rewrite,
+		'show_in_nav_menus'	=> true,
 		'map_meta_cap'      => true,
 		'has_archive' 		=> $archives,
 		'hierarchical' 		=> false,
