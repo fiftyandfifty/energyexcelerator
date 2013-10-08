@@ -82,20 +82,17 @@ if( $posts ): ?>
 						$port_photo_thumb_url = 'http://www.placehold.it/600';
 					}
 				 ?>
-				<div class="port-photo <?php echo $port_column_class; ?>">
-					<div class="port-photo-overlay">
-						<div class="port-photo-overlay-inner">
-							<a href="<?php the_permalink(); ?>">
-							<h3><?php the_title(); ?></h3>
-							<?php the_content(); ?>
-							</a>
-						</div>
-					</div>
-					<div class="port-photo-thumb bg-cover" style="background-image:url('<?php echo $port_photo_thumb_url; ?>')">
-						<div class="port-photo-content">							
-						</div>
-					</div>
-					<h3><?php the_title(); ?></h3>
+				<div class="box <?php echo $port_column_class; ?> has_footer has_hover_overlay">
+					<a href="<?php the_permalink(); ?>">
+						<div class="box-hover-overlay"></div>
+						<main class="box-inner">
+							<div class="box-image backstretch" data-img-src="<?php echo $port_photo_thumb_url; ?>"></div>
+						</main>
+						<footer>
+							<h4><?php the_title(); ?></h4>
+							<span>Company Name Here</span>
+						</footer>
+					</a>
 				</div>
 			<?php endforeach; wp_reset_postdata(); ?>
 			</div>

@@ -55,9 +55,11 @@ if( $page_query->have_posts() ) : while( $page_query->have_posts() ) : $page_que
 			<h1><?php the_title(); ?></h1>
 			<?php the_excerpt(); ?>
 		</div>
-		<div class="row">
-			<?php if( $archive_link) : ?><a href="<?php the_sub_field('page_link'); ?>" class="btn"><?php the_sub_field('archive_text'); ?></a><?php endif; ?>
+		<?php if( $archive_link) : ?>
+		<div class="row centered">
+			<a href="<?php the_sub_field('page_link'); ?>" class="btn"><?php the_sub_field('archive_text'); ?></a>
 		</div>
+		<?php endif; ?>
 	</div>
 </section>
 

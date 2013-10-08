@@ -62,7 +62,7 @@ $blog_query = new WP_Query( $blog_args ); ?>
 			<?php endwhile; ?>
 		</div>
 		<?php if( $show_link_to_blog ) : ?>
-		<div class="row">
+		<div class="row centered">
 			<a href="<?php if( get_option( 'show_on_front' ) == 'page' ) { echo get_permalink( get_option('page_for_posts' ) ); } ?>" class="btn">
 				<?php if( $blog_link_text ) : ?>
 				<?php echo $blog_link_text; ?>
