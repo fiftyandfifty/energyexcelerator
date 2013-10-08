@@ -108,7 +108,7 @@ if( $posts ): ?>
 							</main>
 							<footer>
 								<h4><?php the_title(); ?></h4>
-								<span></span>
+								<span>Position Name Here</span>
 							</footer>
 						</a>
 					</div>
