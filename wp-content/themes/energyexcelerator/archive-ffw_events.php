@@ -19,7 +19,7 @@
           <h1><?php 
           	if ( function_exists( 'ffw_events_get_label_plural' ) ) : 
           		echo ffw_events_get_label_plural(); 
-          	else : 
+          	else :  
           		echo 'Events';
           	endif;  ?></h1>
           <article class="post post-<?php echo get_the_ID(); ?>">
