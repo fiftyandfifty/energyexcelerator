@@ -1,10 +1,12 @@
 <?php
 
+
 $section_title    	= get_sub_field('section_title'); 
 $section_subtitle 	= get_sub_field('section_subtitle');
 $show_full_content	= get_sub_field('show_full_content');
 $show_link_to_blog	= get_sub_field('show_link_to_blog');
 $blog_link_text		= get_sub_field('blog_link_text');
+
 
 $ppp = get_sub_field('number_posts');
 
@@ -18,6 +20,7 @@ $blog_query = new WP_Query( $blog_args ); ?>
 <?php if( $blog_query->have_posts() ) : ?>
 <div id="main" class="default blog">
 	<div class="container">
+
 		<div class="row">
 			<?php if( $section_title ) : ?>
 				<h1><?php the_sub_field('section_title'); ?></h1>
@@ -69,6 +72,7 @@ $blog_query = new WP_Query( $blog_args ); ?>
 			</a>
 		</div>
 		<?php endif; ?>
+
 	</div>
 </div>
 <?php endif; wp_reset_query(); ?>
