@@ -100,19 +100,17 @@ if( $posts ): ?>
 
 					 	?>
 
-					<div class="staff-photo <?php echo $staff_column_class; ?>">
-						<div class="staff-photo-overlay">
-							<div class="staff-photo-overlay-inner">
-								<a href="<?php the_permalink(); ?>" style="display:block;">
-									<h3><?php the_title(); ?></h3>
-									<?php the_content(); ?>
-								</a>
-							</div>
-						</div>
-						<div class="staff-photo-thumb bg-cover" style="background-image:url(<?php echo $staff_photo_thumb_url; ?>)">
-							<div class="staff-photo-content">
-							</div>
-						</div>
+					<div class="box <?php echo $staff_column_class; ?> has_footer has_hover_overlay">
+						<a href="<?php the_permalink(); ?>">
+							<div class="box-hover-overlay"></div>
+							<main class="box-inner">
+								<div class="box-image backstretch" data-img-src="<?php echo $staff_photo_thumb_url; ?>"></div>
+							</main>
+							<footer>
+								<h4><?php the_title(); ?></h4>
+								<span></span>
+							</footer>
+						</a>
 					</div>
 
 				<?php endforeach; wp_reset_postdata(); ?>
