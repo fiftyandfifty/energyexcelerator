@@ -6,6 +6,16 @@
 
 <div id="main" class="page page-default default">
 	<div class="container">
+    <div class="row">
+      <h1 class="section-title">
+        <?php 
+          if ( function_exists( 'ffw_events_get_label_plural' ) ) : 
+            echo ffw_events_get_label_plural(); 
+          else : 
+            echo 'Events';
+          endif;  ?>
+      </h1>
+    </div>
 
 		<div id="sidebar-default" class="sidebar collapsable collapsed push-<?php sidebar_position_class(); ?>">
 		  <div id="sidebar-toggle"></div> 
@@ -16,12 +26,7 @@
       <div class="content-inner">
         
         <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-          <h1><?php 
-          	if ( function_exists( 'ffw_events_get_label_plural' ) ) : 
-          		echo ffw_events_get_label_plural(); 
-          	else : 
-          		echo 'Events';
-          	endif;  ?></h1>
+          
           <article class="post post-<?php echo get_the_ID(); ?>">
             <header>
               <h1 class="post-title">

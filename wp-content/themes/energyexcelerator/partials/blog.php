@@ -18,7 +18,7 @@ $blog_args = array(
 $blog_query = new WP_Query( $blog_args ); ?>
 
 <?php if( $blog_query->have_posts() ) : ?>
-<div id="main" class="default blog">
+<div id="main" class="page page-default default">
 	<div class="container">
 
 		<div class="row">
@@ -33,13 +33,15 @@ $blog_query = new WP_Query( $blog_args ); ?>
 			<?php endif; ?>
 
 
-			<div class="sidebar push-<?php sidebar_position_class(); ?>">
+			<div class="sidebar collapsable collapsed push-<?php sidebar_position_class(); ?>">
+				<div id="sidebar-toggle"></div>
 				<?php get_sidebar(); ?>
 			</div><!-- #sidebar -->
 			
-			<?php while( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
+			
 			<div id="content" class="push-<?php sidebar_position_class(); ?>">
 				<div class="content-inner">
+					<?php while( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
 					<article class="post post-<?php echo get_the_ID(); ?>">
 					  <header>
 					    <h1 class="post-title">
@@ -57,9 +59,9 @@ $blog_query = new WP_Query( $blog_args ); ?>
 					    <?php do_action('FFW_post_details'); ?>
 					  </footer>
 					</article>
+					<?php endwhile; ?>
 				</div>
 			</div>
-			<?php endwhile; ?>
 		</div>
 		<?php if( $show_link_to_blog ) : ?>
 		<div class="row centered">
