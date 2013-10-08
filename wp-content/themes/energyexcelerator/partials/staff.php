@@ -108,7 +108,19 @@ if( $posts ): ?>
 							</main>
 							<footer>
 								<h4><?php the_title(); ?></h4>
-								<span>Position Name Here</span>
+								<span>
+									<?php
+
+										$mentor_org		  = get_field('mentor_organization');
+										$staff_position	  = get_field('staff_position');
+
+										if( $mentor_org ){
+											echo $mentor_org;
+										}elseif( $staff_position ){
+											echo $staff_position;
+										}
+									?>
+								</span>
 							</footer>
 						</a>
 					</div>

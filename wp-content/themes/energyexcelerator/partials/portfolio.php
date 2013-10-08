@@ -97,7 +97,7 @@ if( $posts ): ?>
 										foreach( $terms as $term) {
 										    echo $term->name . ' ';
 										}
-									}
+									}	
 								?>
 							</span>
 						</footer>
