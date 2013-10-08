@@ -1,6 +1,6 @@
 <?php
 
-// filter the Gravity Forms button type
+// filter the Gravity Forms button type test
 add_filter("gform_submit_button", "form_submit_button", 10, 2);
 function form_submit_button($button, $form){
 
