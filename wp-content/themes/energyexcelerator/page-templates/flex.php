@@ -23,7 +23,7 @@ if( $show_slider ){
 	));
 }
 
-?>
+?> 
 
 
 	<?php 
