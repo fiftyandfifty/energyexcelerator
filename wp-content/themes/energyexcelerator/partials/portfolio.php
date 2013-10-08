@@ -90,7 +90,16 @@ if( $posts ): ?>
 						</main>
 						<footer>
 							<h4><?php the_title(); ?></h4>
-							<span>Company Name Here</span>
+							<span>
+								<?php
+									$terms = get_the_terms( $post->ID, 'portfolio_category' );
+									if( $terms && ! is_wp_error( $terms ) ){
+										foreach( $terms as $term) {
+										    echo $term->name . ' ';
+										}
+									}
+								?>
+							</span>
 						</footer>
 					</a>
 				</div>
