@@ -22,15 +22,17 @@ $blog_query = new WP_Query( $blog_args ); ?>
 	<div class="container">
 
 		<div class="row">
-			<?php if( $section_title ) : ?>
-				<h1 class="section-title"><?php the_sub_field('section_title'); ?></h1>
-			<?php else : ?>
-				<h1 class="section-title">From our Blog</h1>
-			<?php endif; ?>
-			
-			<?php if( $section_subtitle ) : ?>
-				<p><?php the_sub_field('section_subtitle'); ?></p>
-			<?php endif; ?>
+			<header class="section-header">
+				<?php if( $section_title ) : ?>
+					<h1 class="section-title"><?php the_sub_field('section_title'); ?></h1>
+				<?php else : ?>
+					<h1 class="section-title">From our Blog</h1>
+				<?php endif; ?>
+				
+				<?php if( $section_subtitle ) : ?>
+					<h3 class="section-subtitle"><?php the_sub_field('section_subtitle'); ?></h3>
+				<?php endif; ?>
+			</header>
 
 
 			<div class="sidebar collapsable collapsed push-<?php sidebar_position_class(); ?>">
