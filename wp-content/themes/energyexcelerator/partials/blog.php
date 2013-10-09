@@ -24,9 +24,9 @@ $blog_query = new WP_Query( $blog_args ); ?>
 		<div class="row">
 			<header class="section-header">
 				<?php if( $section_title ) : ?>
-					<h1 class="section-title"><?php the_sub_field('section_title'); ?></h1>
+					<h2 class="section-title"><?php the_sub_field('section_title'); ?></h2>
 				<?php else : ?>
-					<h1 class="section-title">From our Blog</h1>
+					<h2 class="section-title">From our Blog</h2>
 				<?php endif; ?>
 				
 				<?php if( $section_subtitle ) : ?>

@@ -8,14 +8,14 @@
 	<div class="container">
     <div class="row">
       <header class="section-header">
-      	<h1 class="section-title">
+      	<h2 class="section-title">
 	        <?php 
 	          if ( function_exists( 'ffw_events_get_label_plural' ) ) : 
 	            echo ffw_events_get_label_plural(); 
 	          else : 
 	            echo 'Events';
 	          endif;  ?>
-	      </h1>
+	      </h2>
       </header>
     </div>
 
