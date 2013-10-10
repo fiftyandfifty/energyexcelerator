@@ -24,9 +24,9 @@ $blog_query = new WP_Query( $blog_args ); ?>
 		<div class="row">
 			<header class="section-header">
 				<?php if( $section_title ) : ?>
-					<h1 class="section-title"><?php the_sub_field('section_title'); ?></h1>
+					<h2 class="section-title"><?php the_sub_field('section_title'); ?></h2>
 				<?php else : ?>
-					<h1 class="section-title">From our Blog</h1>
+					<h2 class="section-title">From our Blog</h2>
 				<?php endif; ?>
 				
 				<?php if( $section_subtitle ) : ?>
@@ -46,9 +46,9 @@ $blog_query = new WP_Query( $blog_args ); ?>
 					<?php while( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
 					<article class="post post-<?php echo get_the_ID(); ?>">
 					  <header>
-					    <h1 class="post-title">
+					    <h2 class="post-title">
 					      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-					    </h1>
+					    </h2>
 					  </header>
 					  <div class="content">
 					  	<?php if( $show_full_content ) : ?>

@@ -17,7 +17,9 @@ if( $background_color ){
 
 //Set Text Color
 if( $text_color ){
-	$text_color = "color:" . $text_color . "; ";
+	$text_color_style = "color:" . $text_color . "; ";
+
+	$box_h4 = 'style=color:' . $text_color . ';' ;
 }
 
 //Check if $repeat_image is a 
@@ -58,7 +60,7 @@ if( $posts ): ?>
 	<?php $section_width = get_sub_field('section_width'); // get the container class (section_width ACF) ?>
 	<?php $port_column_class = get_column_count_class(); // get the column box class by counting post objects ?>
 	
-	<section class="portfolio" style="<?php echo $background_color. $text_color . $background_image; ?>">
+	<section class="portfolio" style="<?php echo $background_color. $text_color_style . $background_image; ?>">
 		<div class="<?php echo $section_width; ?>">
 
 			<?php if( $section_title ) : ?>
@@ -89,7 +91,7 @@ if( $posts ): ?>
 							<div class="box-image backstretch" data-img-src="<?php echo $port_photo_thumb_url; ?>"></div>
 						</main>
 						<footer>
-							<h4><?php the_title(); ?></h4>
+							<h4 <?php echo $box_h4; ?>><?php the_title(); ?></h4>
 							<span>
 								<?php
 									$terms = get_the_terms( $post->ID, 'portfolio_category' );
