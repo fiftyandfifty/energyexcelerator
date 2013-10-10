@@ -34,7 +34,7 @@
             	<div class="circle-date">
             		<div class="circle-date-inner">
             			<i class="icon icon-calendar"></i>
-            			<span class="date-month"><?php the_time('F'); ?></span>
+            			<span class="date-month"><?php the_time('M'); ?></span>
             			<b class="date-day"><?php the_time('j'); ?></b>
             		</div>
             	</div>
