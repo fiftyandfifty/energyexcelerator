@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 
 <?php do_action('FFW_hero_before'); ?>
-<?php do_action('FFW_hero'); ?>
+<?php //do_action('FFW_hero'); ?>
 <?php do_action('FFW_hero_after'); ?>
 
 <div id="main" class="page page-default default">
