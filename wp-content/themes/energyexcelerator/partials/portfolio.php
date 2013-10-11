@@ -64,9 +64,9 @@ if( $posts ): ?>
 		<div class="<?php echo $section_width; ?>">
 
 			<?php if( $section_title ) : ?>
-				<h1><?php the_sub_field('section_title'); ?></h1>
+				<h2><?php the_sub_field('section_title'); ?></h2>
 			<?php else : ?>
-				<h1>Our Portfolio</h1>
+				<h2>Our Portfolio</h2>
 			<?php endif; ?>
 			
 			<?php if( $section_subtitle ) : ?>
