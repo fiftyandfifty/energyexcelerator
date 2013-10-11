@@ -107,7 +107,7 @@ if( $posts ): ?>
 								<div class="box-image backstretch" data-img-src="<?php echo $staff_photo_thumb_url; ?>"></div>
 							</main>
 							<footer>
-								<h4><?php the_title(); ?></h4>
+								<h6><?php the_title(); ?></h6>
 								<span>
 									<?php
 
