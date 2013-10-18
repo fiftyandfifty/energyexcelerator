@@ -90,19 +90,25 @@ if( $posts ): ?>
 						<main class="box-inner">
 							<div class="box-image backstretch" data-img-src="<?php echo $port_photo_thumb_url; ?>"></div>
 						</main>
+
+						<?php $port_title = get_the_title(); ?>
+						<?php if( !empty( $port_title )  ) : ?>
 						<footer>
 							<h4 <?php echo $box_h4; ?>><?php the_title(); ?></h4>
+							<?php 
+							$terms = get_the_terms( $post->ID, 'portfolio_category' );
+							
+							if( $terms && ! is_wp_error( $terms ) ) { ?>
 							<span>
 								<?php
-									$terms = get_the_terms( $post->ID, 'portfolio_category' );
-									if( $terms && ! is_wp_error( $terms ) ){
-										foreach( $terms as $term) {
-										    echo $term->name . ' ';
-										}
-									}	
+									foreach( $terms as $term) {
+									    echo $term->name . ' ';
+									} 
 								?>
 							</span>
+							<?php } ?>
 						</footer>
+						<?php endif; ?>
 					</a>
 				</div>
 			<?php endforeach; wp_reset_postdata(); ?>

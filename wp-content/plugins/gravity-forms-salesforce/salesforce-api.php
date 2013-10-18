@@ -484,12 +484,6 @@ EOD;
                 <h3><?php _e('Salesforce Error', "gravity-forms-salesforce");?></h3>
                 <p><?php echo empty($api) ? __(sprintf("To get started, please configure your %sSalesforce Settings%s.", '<a href="admin.php?page=gf_settings&addon=Salesforce">', "</a>"), "gravity-forms-salesforce") : $api; ?></p>
             </div>
-            <?php
-                } else {
-            ?>
-            <div class="updated" id="message" style="margin-top:20px;">
-                <p><?php _e('Do you like this free plugin? <a href="http://katz.si/gfsfrate">Please review it on WordPress.org</a>! <small class="description alignright">Note: You must be logged in to WordPress.org to leave a review!</small>', 'gravity-forms-salesforce'); ?></p>
-            </div>
             <?php } ?>
             <div class="clear"></div>
             <ul class="subsubsub" style="margin-top:0;">
