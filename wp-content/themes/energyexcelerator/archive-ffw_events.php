@@ -26,24 +26,55 @@
     
     <div id="content" class="page push-<?php sidebar_position_class(); ?>">
       <div class="content-inner">
+
+        <?php 
+
+
+        $event_args = array(
+          'post_type'     => 'ffw_events',
+          'meta_key'      => 'event_date',
+          'orderby'       => 'meta_value_num',
+          'order'         => 'ASC',
+          'nopaging'      => true
+          );
+
+        $events_query = new WP_Query( $event_args );
+
+         ?>
         
-        <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+        <?php if( $events_query->have_posts() ) : while( $events_query->have_posts() ) : $events_query->the_post(); ?>
+
+          <?php $date = DateTime::createFromFormat('Ymd', get_field('event_date')); ?>
 
           <article class="post post-events post-<?php echo get_the_ID(); ?>">
             <div class="post-thumb med">
+              <?php if( $date ){ ?>
+                <?php  
+                  $event_month    = $date->format('m');
+                  $event_date_num = $date->format('j');
+                ?>
             	<div class="circle-date">
             		<div class="circle-date-inner">
             			<i class="icon icon-calendar"></i>
-            			<span class="date-month"><?php the_time('M'); ?></span>
-            			<b class="date-day"><?php the_time('j'); ?></b>
+            			<span class="date-month"><?php echo $event_month; ?></span>
+            			<b class="date-day"><?php echo $event_date_num; ?></b>
             		</div>
             	</div>
+              <?php } ?>
             </div>
             <div class="post-content">
             	<h2 class="post-title">
             	  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>  
             	</h2>
-            	<?php do_action('FFW_post_details'); ?>
+              <ul class="post-meta">
+                 <?php $location = get_field('event_location', get_the_ID()); ?>
+                 <?php if( $location ) : ?>
+                <li>
+                  <i class="icon icon-marker"></i>
+                  <?php echo $location['address']; ?>
+                </li>
+              <?php endif; ?>
+              </ul>
             </div>
           </article>
 
