@@ -1,5 +1,5 @@
 web1:
-  name: jeffrey
+  php_version: 5.4.14
   php_upload_max_filesize: "32M"
   php_post_max_size: "32M"
   shared_writable_dirs:
