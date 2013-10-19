@@ -74,3 +74,12 @@ Gravity Form Styles
 .gform_wrapper .gfield_time_ampm select, .gfield_select{
 	height:44px;
 }
+
+
+.post-type-archive-ffw_events #hero {
+	height:200px;
+}
+
+.post-type-archive-ffw_events #main.page {
+	margin-top:0;
+}
