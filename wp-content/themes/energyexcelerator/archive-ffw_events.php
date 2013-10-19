@@ -40,9 +40,9 @@
             	</div>
             </div>
             <div class="post-content">
-            	<h1 class="post-title">
+            	<h2 class="post-title">
             	  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>  
-            	</h1>
+            	</h2>
             	<?php do_action('FFW_post_details'); ?>
             </div>
           </article>
