@@ -26,10 +26,7 @@
   </div>
   <footer>
       <ul class="post-meta">
-         <?php $location = get_field('event_location'); 
-         echo $location['coordinates'];
-         //$coord = array_reverse( $location['coordinates'] );
-          ?>
+         <?php $location = get_field('event_location');  ?>
         <li>
           <i class="icon icon-marker"></i>
           <?php if( $location ) : ?>
