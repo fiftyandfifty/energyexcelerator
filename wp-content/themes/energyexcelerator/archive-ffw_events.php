@@ -28,14 +28,22 @@
       <div class="content-inner">
 
         <?php 
-
+        //@TODO: Get current date (local based on admin timezone in settings )
+        $today = date('Ymd');
 
         $event_args = array(
           'post_type'     => 'ffw_events',
           'meta_key'      => 'event_date',
           'orderby'       => 'meta_value_num',
           'order'         => 'ASC',
-          'nopaging'      => true
+          'nopaging'      => true,
+          'meta_query'    => array(
+              array(
+                'key'     => 'event_date',
+                'value'   => $today,
+                'compare' => '>'
+                )
+            )
           );
 
         $events_query = new WP_Query( $event_args );
@@ -50,7 +58,8 @@
             <div class="post-thumb med">
               <?php if( $date ){ ?>
                 <?php  
-                  $event_month    = $date->format('m');
+                
+                  $event_month    = $date->format('M');
                   $event_date_num = $date->format('j');
                 ?>
             	<div class="circle-date">
