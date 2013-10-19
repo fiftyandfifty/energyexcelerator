@@ -38,7 +38,6 @@
           No location entered
           <?php endif; ?>
         </li>
-      
       </ul>
   </footer>
 </article>
