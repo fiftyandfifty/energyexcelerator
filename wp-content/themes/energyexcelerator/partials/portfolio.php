@@ -93,6 +93,7 @@ if( $posts ): ?>
 
 						<?php $port_title = get_the_title(); ?>
 						<?php if( !empty( $port_title )  ) : ?>
+							<?php if( current_user_can( 'moderate_comments') ) : echo "<!-- "; echo get_permalink( $post->ID ); echo " -->"; endif; ?>
 						<footer>
 							<h4 <?php echo $box_h4; ?>><?php the_title(); ?></h4>
 							<?php 
