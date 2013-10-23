@@ -8,3 +8,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
+
+
+# perform redirect if hawaiirenewable.com
+RewriteCond %{HTTP_HOST} ^hawaiirenewable.com/$ [NC]
+RewriteRule ^(.*)$ http://energyexcelerator.com/$1 [R=301,L]
+
