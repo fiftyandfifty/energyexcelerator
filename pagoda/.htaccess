@@ -6,9 +6,5 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
-
-RewriteCond %{HTTP_HOST} hawaiirenewable.com
-RewriteCond %{REQUEST_URI} !hawaiirenewable.com/
-RewriteRule ^(.*)$ energyexcelerator.com/$1 [L] 
 </IfModule>
 # END WordPress
