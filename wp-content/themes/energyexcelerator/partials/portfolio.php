@@ -85,8 +85,8 @@ if( $posts ): ?>
 					}
 				 ?>
 				<div class="box <?php echo $port_column_class; ?> has_footer has_hover_overlay">
-					<!--<a href="<?php // the_permalink(); ?>"> -->
-						<!-- <div class="box-hover-overlay"></div> -->
+					<a href="<?php the_permalink(); ?>"> 
+						<div class="box-hover-overlay"></div>
 						<main class="box-inner">
 							<div class="box-image backstretch" data-img-src="<?php echo $port_photo_thumb_url; ?>"></div>
 						</main>
@@ -110,7 +110,7 @@ if( $posts ): ?>
 							<?php } ?>
 						</footer>
 						<?php endif; ?>
-					<!-- </a> -->
+					</a>
 				</div>
 			<?php endforeach; wp_reset_postdata(); ?>
 			</div>
