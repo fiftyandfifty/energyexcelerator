@@ -10,5 +10,5 @@ RewriteRule . /index.php [L]
 # END WordPress
 
 RewriteEngine On
-RewriteCond %{HTTP_HOST} !energyexcelerator.com$ [NC]
+RewriteCond %{HTTP_HOST} !www.energyexcelerator.com [NC]
 RewriteRule ^(.*)$ http://www.energyexcelerator.com/$1 [L,R=301]
