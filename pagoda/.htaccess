@@ -8,3 +8,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !energyexcelerator.com$ [NC]
+RewriteRule ^(.*)$ http://www.energyexcelerator.com/$1 [L,R=301]
