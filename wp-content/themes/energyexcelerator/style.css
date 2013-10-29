@@ -75,7 +75,9 @@ Gravity Form Styles
 	height:44px;
 }
 
-
+/**
+ * Archive Style Adjustments
+ */
 .post-type-archive-ffw_events #hero {
 	height:200px;
 }
