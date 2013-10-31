@@ -1,6 +1,7 @@
 web1:
   php_upload_max_filesize: "32M"
   php_post_max_size: "32M"
+  php_version: 5.4.14
   shared_writable_dirs:
     - wp-content/uploads
     - wp-content/cache
