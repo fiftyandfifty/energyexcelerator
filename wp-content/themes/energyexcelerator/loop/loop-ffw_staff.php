@@ -3,7 +3,7 @@
     <h1 class="post-title">
       <?php the_title(); ?>
     </h1>
-	<h2>	
+	<h3>	
 		<?php
 
 			$mentor_org		  = get_field('mentor_organization');
@@ -15,7 +15,7 @@
 				echo $staff_position;
 			}
 		?>
-	</h2>
+	</h3>
   </header>
   <div class="content">
   	<h5><?php the_excerpt(); ?></h5>
