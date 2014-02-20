@@ -61,11 +61,11 @@ if( $posts ): ?>
 	<?php setup_postdata($post); ?>
 
 	<?php $section_width = get_sub_field('section_width'); // get the container class (section_width ACF) ?>
-	<?php $staff_column_class = get_column_count_class(); // get the column box class by counting post objects ?>
+	<?php $staff_column_class = 'box-fourth'; // get the column box class by counting post objects ?>
 	
 	<section class="staff" style="<?php echo $background_color. $text_color . $background_image; ?>">
 		<div class="<?php echo $section_width; ?>">
-			
+		
 			<?php if( $section_title ) : ?>
 				<h2><?php the_sub_field('section_title'); ?></h2>
 			<?php else : ?>
@@ -76,6 +76,7 @@ if( $posts ): ?>
 			<?php endif; ?>
 
 			<div class="row">
+
 				<?php foreach( $posts as $post ) : // variable must be called $post (IMPORTANT) ?>
 						
 						<?php setup_postdata($post); ?>
@@ -91,6 +92,7 @@ if( $posts ): ?>
 						  		)
 						  	);
 
+
 						} else {
 							
 							//@TODO: Replace with a designed placeholder.
@@ -99,6 +101,7 @@ if( $posts ): ?>
 						}
 
 					 	?>
+
 
 					<div class="box <?php echo $staff_column_class; ?> has_footer has_hover_overlay">
 						<a href="<?php the_permalink(); ?>">
