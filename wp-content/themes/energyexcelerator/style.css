@@ -85,3 +85,15 @@ Gravity Form Styles
 .post-type-archive-ffw_events #main.page {
 	margin-top:0;
 }
+
+/**
+ * Staff Style Adjustments
+ */
+body.single-ffw_staff #main .container #content .content-inner article.post header h1.post-title {
+ 	margin-bottom: 0;
+}
+
+body.single-ffw_staff #main .container #content .content-inner article.post header h3 {
+ 	padding-top: 0;
+ 	margin-bottom: 0;
+}
