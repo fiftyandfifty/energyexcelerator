@@ -15,7 +15,7 @@
           <?php the_post_thumbnail('staff_detail'); ?>
         <?php endif; ?>
         <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-          <?php get_template_part( 'loop/loop', get_post_type() ); ?>
+          <?php get_template_part( 'loop/loop-ffw_staff', get_post_type() ); ?>
         <?php endwhile; endif; ?>
 
       </div><!-- .content-inner -->
