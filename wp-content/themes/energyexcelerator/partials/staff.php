@@ -93,11 +93,6 @@ if( $posts ): ?>
 						  	);
 
 
-						} else {
-							
-							//@TODO: Replace with a designed placeholder.
-							$staff_photo_thumb_url = 'http://placehold.it/600';
-
 						}
 
 					 	?>
@@ -135,15 +130,4 @@ if( $posts ): ?>
 			</div>
 		</div>
 	</section>
-<?php else :  ?>
-
-	<section class="staff" style="width:100%; background:#333; color:#fff; background-image: url(/wp-content/uploads/2013/09/reagan_work_marcus_price.jpeg);">
-		<div class="container">
-			<h1>Our Team</h1>
-			<div class="span4">
-				<p>No staff members added yet.</p>
-			</div>
-		</div>
-	</section>
-	
 <?php endif; ?>

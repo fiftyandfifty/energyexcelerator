@@ -80,8 +80,6 @@ if( $posts ): ?>
 				<?php // get featured image url if it exists, fallback to placeholder
 					if ( has_post_thumbnail() ) {
 					 	$port_photo_thumb_url = get_featured_image_url();;
-					} else {
-						$port_photo_thumb_url = 'http://www.placehold.it/600';
 					}
 				 ?>
 				<div class="box <?php echo $port_column_class; ?> has_footer has_hover_overlay">
