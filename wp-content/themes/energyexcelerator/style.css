@@ -89,11 +89,11 @@ Gravity Form Styles
 /**
  * Staff Style Adjustments
  */
-body.single-ffw_staff #main .container #content .content-inner article.post header h1.post-title {
+/*body.single-ffw_staff #main .container #content .content-inner */article.post header h1.post-title {
  	margin-bottom: 0;
 }
 
-body.single-ffw_staff #main .container #content .content-inner article.post header h3 {
+/*body.single-ffw_staff #main .container #content .content-inner*/ article.post header h3 {
  	padding-top: 0;
- 	margin-bottom: 0;
+ 	margin-top: 0;
 }
