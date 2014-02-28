@@ -131,25 +131,38 @@ Gravity Form Styles
 	color: #2d8fbd;
 }
 
-.energy-innovation .one-half .span-inner {
-	background-color:rgba(244,244,244,0.7);
-	height: 305px;
+.transbox .one-half {
+	padding:10px;
+}
 
+/* .transbox general styles */
+.transbox .one-half .span-inner {
 	-webkit-border-radius: 5px; 
 	-moz-border-radius: 5px; 
 	border-radius: 5px; 
 }
 
-.energy-innovation .one-half {
-	padding: 10px;
-}
-
-.energy-innovation .one-half .span-inner img {
+.transbox .one-half .span-inner img {
 	padding-top: 40px;
 }
 
-.energy-innovation .one-half .span-inner p {
+.transbox .one-half .span-inner p {
 	padding: 0 35px;
+}
+/* end transbox general styles */
+
+.transbox.energy-innovation .span-inner {
+	height: 305px;
+	background-color:rgba(244,244,244,0.7);
 }
 
 /* Home page - 15 startups */
+.transbox.startups .span-inner {
+	background-color: rgba(255,255,255,0.7);
+	height: 360px;
+}
+
+.transbox.startups .one-half .span-inner p {
+	padding: 0 25px;
+}
+
