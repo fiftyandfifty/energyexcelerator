@@ -97,3 +97,56 @@ Gravity Form Styles
  	padding-top: 0;
  	margin-top: 0;
 }
+
+/*
+ * =================================================================================================== 
+ *
+ *     Tracy's CSS
+ *
+ * ===================================================================================================
+ */
+
+/* Hawaii page */
+.why-hawaii {
+	margin-top: -80px;
+}
+
+@media screen and (min-width: 769px)   {
+	.why-hawaii img {
+		margin-left: -1.15em;
+	}
+
+	.why-hawaii h1 {
+		padding-top: 1.5em;
+	}
+}
+
+.why-hawaii h1 {
+	color: #000;
+	margin: 0.5em 0 0 0;
+} 
+
+.why-hawaii h3 {
+	color: #2d8fbd;
+}
+
+.energy-innovation .one-half .span-inner {
+	background-color:rgba(244,244,244,0.7);
+	height: 305px;
+
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	border-radius: 5px; 
+}
+
+.energy-innovation .one-half {
+	padding: 10px;
+}
+
+.energy-innovation .one-half .span-inner img {
+	padding-top: 40px;
+}
+
+.energy-innovation .one-half .span-inner p {
+	padding: 0 35px;
+}
