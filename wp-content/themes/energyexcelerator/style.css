@@ -175,30 +175,43 @@ Gravity Form Styles
  */
 
  /* Home page - Hawaii is startup paradise */
- #home_innovation .one-third {
+#home_innovation .one-third .span-inner {
 	background-color:#412633;
 	background-color:rgba(65,38,51,0.7);
 	border-radius: 5px;
 	min-height:265px;
-	margin: 0 5px;
-	width:300px;
 }
+
+#home_innovation .one-third {
+	padding: 10px;
+}
+
+#home_innovation img {
+	margin-top: 20px;
+}
+
+#home_innovation h3 {
+	padding-top: 0;
+}
+
 #home_innovation .btn {
 	color:#789eb6;
 	background:#fff;
 	border-radius: 5px;
 	padding: 25px;
-
 }
 
 /* Home page - This is what we offer */
+#home_offer { color: #fff; }
+
+#home_offer h3 { margin-bottom: 0; }
+
 #home_offer .home_funding {
 	background:#2f7499;
 	border-radius: 5px;
 	margin: 5px 0;
 	min-height:140px;
 	padding:2em 3em;
-
 }
 
 #home_offer .home_relationship {
@@ -207,9 +220,8 @@ Gravity Form Styles
 	margin: 5px 0;
 	height:140px;
 	padding:2em 3em;
-
-
 }
+
 #home_offer .home_place {
 	background:#28afed;
 	border-radius: 5px;
@@ -217,23 +229,27 @@ Gravity Form Styles
 	padding:2em 3em;
 	min-height:140px;
 }
+
 #home_offer img {
 	float:left;
 	margin: 0 30px 0 0;
 
 }
+
 #home_offer h3 {
 	text-align:left;
 	padding:0;
 	min-width:300px;
 }
+
 #home_offer p {
 	float:left;
 	text-align:left;
 
 }
+
 #home_offer .btn {
 	background-color:#2f7499;
 	padding:25px;
-	margin-top:4em;
+	margin: 1.3em 0 0 0;
 }
