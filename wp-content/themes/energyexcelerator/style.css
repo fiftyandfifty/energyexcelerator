@@ -9,6 +9,7 @@ Template:       fifty-framework-master
 
 @import url("../fifty-framework-master/style.css");
 
+
 section{
 	text-align: center;
 	/*padding:100px 0;*/
@@ -184,10 +185,12 @@ footer.partners p {
 /* ao */
 /* Home page - Hawaii is startup paradise */
 #home_innovation .one-third .span-inner {
+
 	background-color:#412633;
 	background-color:rgba(65,38,51,0.7);
 	border-radius: 5px;
 	min-height:265px;
+
 }
 
 #home_innovation .one-third {
@@ -202,17 +205,20 @@ footer.partners p {
 	padding-top: 0;
 }
 
+
 #home_innovation .btn {
 	color:#789eb6;
 	background:#fff;
 	border-radius: 5px;
 	padding: 25px;
+
 }
 
 /* Home page - This is what we offer */
 #home_offer { color: #fff; }
 
 #home_offer h3 { margin-bottom: 0; }
+
 
 #home_offer .home_funding {
 	background:#2f7499;
@@ -228,6 +234,7 @@ footer.partners p {
 	margin: 5px 0;
 	min-height:140px;
 	padding:1.5em 3em;
+
 }
 
 #home_offer .home_place {
@@ -238,9 +245,17 @@ footer.partners p {
 	min-height:140px;
 }
 
+
 #home_offer img {
 	float:left;
 	margin: 15px 30px 0 0;
+}
+
+
+#home_offer img {
+	float:left;
+	margin: 0 30px 0 0;
+
 }
 
 #home_offer h3 {
@@ -248,6 +263,7 @@ footer.partners p {
 	padding:0;
 	min-width:300px;
 }
+
 
 #home_offer p {
 	text-align:left;
@@ -259,6 +275,13 @@ footer.partners p {
 	margin: 1.3em 0 0 0;
 }
 
-.widget-area {
-	margin-left:35px;
+#home_offer p {
+	text-align:left;
+
 }
+#home_offer .btn {
+	background-color:#2f7499;
+	padding:25px;
+	margin-top:4em;
+}
+
