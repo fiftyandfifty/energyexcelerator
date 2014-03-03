@@ -274,22 +274,22 @@ footer.partners p {
 	border-radius: 5px;
 	margin: 5px 0;
 	min-height:140px;
-	padding:2em 3em;
+	padding:1.5em 3em;
 }
 
 #home_offer .home_relationship {
 	background:#2d90be;
 	border-radius: 5px;
 	margin: 5px 0;
-	height:140px;
-	padding:2em 3em;
+	min-height:140px;
+	padding:1.5em 3em;
 }
 
 #home_offer .home_place {
 	background:#28afed;
 	border-radius: 5px;
 	margin: 5px 0;
-	padding:2em 3em;
+	padding:1.5em 3em;
 	min-height:140px;
 }
 
@@ -306,7 +306,6 @@ footer.partners p {
 }
 
 #home_offer p {
-	float:left;
 	text-align:left;
 
 }
