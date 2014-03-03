@@ -98,16 +98,8 @@ Gravity Form Styles
  	margin-top: 0;
 }
 
-/*
- * =================================================================================================== 
- *
- *     Tracy's CSS
- *
- * ===================================================================================================
- */
-
+/* th */
 /* Hawaii page */
-
 .why-hawaii {
 	margin-top: -80px;
 }
@@ -135,7 +127,6 @@ Gravity Form Styles
 	padding:10px;
 }
 
-/* .transbox general styles */
 .transbox .one-half .span-inner {
 	-webkit-border-radius: 5px; 
 	-moz-border-radius: 5px; 
@@ -149,7 +140,6 @@ Gravity Form Styles
 .transbox .one-half .span-inner p {
 	padding: 0 35px;
 }
-/* end transbox general styles */
 
 .transbox.energy-innovation .span-inner {
 	height: 305px;
@@ -161,17 +151,15 @@ Gravity Form Styles
 	background-color: rgba(255,255,255,0.7);
 	height: 360px;
 }
-
 #home-startup .transbox.startups .one-half .span-inner p {
 	padding: 0 25px;
 }
-
 #home-startup a.btn {
 	background-color: #2f7499;
 	padding: 25px;
 }
 
-/* footer */
+/* Footer - add partner logos */
 .center {
 	margin: 0 auto;
 	text-align: center;
@@ -181,38 +169,31 @@ footer.partners {
 	background-color: #f2f1f1;
 	padding-top: 70px;
 }
-
 footer.partners p {
 	font-size: 1.125em;
 	font-family: "Open Sans", sans-serif;
 	color: #413d3d;
 }
-
 .bottom-logos {
 	text-align: center;
 }
-
 .bottom-logos li {
 	display: inline-block;
 	min-height: 104px;
 	margin: 0;
 }
-
 .bottom-logos li.dept-energy {
 	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat 0 0;
 	width: 108px;
 }
-
 .bottom-logos li.c40 {
 	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -113px 0px;
 	width: 116px;
 }
-
 .bottom-logos li.eco {
 	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -234px 0px;
 	width:118px;	
 }
-
 .bottom-logos li.climate-group {
 	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -357px 0px;
 	width: 241px;
@@ -229,15 +210,8 @@ footer.partners p {
 	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -854px 0px;
 	width: 83px;}
 
-/*
- * =================================================================================================== 
- *
- *     Ariel' CSS
- *
- * ===================================================================================================
- */
-
- /* Home page - Hawaii is startup paradise */
+/* ao */
+/* Home page - Hawaii is startup paradise */
 #home_innovation .one-third .span-inner {
 	background-color:#412633;
 	background-color:rgba(65,38,51,0.7);
@@ -296,7 +270,6 @@ footer.partners p {
 #home_offer img {
 	float:left;
 	margin: 10px 30px 0 0;
-
 }
 
 #home_offer h3 {
@@ -307,7 +280,6 @@ footer.partners p {
 
 #home_offer p {
 	text-align:left;
-
 }
 
 #home_offer .btn {
