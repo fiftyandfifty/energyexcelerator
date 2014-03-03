@@ -157,13 +157,77 @@ Gravity Form Styles
 }
 
 /* Home page - 15 startups */
-.transbox.startups .span-inner {
+#home-startup .transbox.startups .span-inner {
 	background-color: rgba(255,255,255,0.7);
 	height: 360px;
 }
 
-.transbox.startups .one-half .span-inner p {
+#home-startup .transbox.startups .one-half .span-inner p {
 	padding: 0 25px;
+}
+
+#home-startup a.btn {
+	background-color: #2f7499;
+	padding: 25px;
+}
+
+/* footer */
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+footer.partners {
+	min-height: 305px;
+	background-color: #f2f1f1;
+	padding-top: 70px;
+}
+
+footer.partners p {
+	font-size: 1.125em;
+	font-family: "Open Sans", sans-serif;
+	color: #413d3d;
+}
+
+.bottom-logos {
+	text-align: center;
+}
+
+.bottom-logos li {
+	display: inline-block;
+	height: 104px;
+	margin: 0s;
+}
+
+.bottom-logos li.dept-energy {
+	background: url("http://energyexcelerator.dev/wp-content/uploads/2014/02/partners-footer.jpg") no-repeat 0 0;
+	width: 108px;
+}
+
+.bottom-logos li.c40 {
+	background: url("http://energyexcelerator.dev/wp-content/uploads/2014/02/partners-footer.jpg") no-repeat -113px 0px;
+	width: 116px;
+}
+
+.botom-logos li.eco {
+	background: url("http://energyexcelerator.dev/wp-content/uploads/2014/02/partners-footer.jpg") no-repeat -234px 0px;
+	width:118;	
+}
+
+.bottom-logos li.climate-group {
+	background: url("http://energyexcelerator.dev/wp-content/uploads/2014/02/partners-footer.jpg") no-repeat -357px 0px;
+	width: 241px;
+}
+.bottom-logos li.nyc-gov {
+	background: url("http://energyexcelerator.dev/wp-content/uploads/2014/02/partners-footer.jpg") no-repeat -603px 0px;
+	width: 127px;
+}
+.bottom-logos li.exec-office {
+	background: url("http://energyexcelerator.dev/wp-content/uploads/2014/02/partners-footer.jpg") no-repeat -735px 0px;	
+	width: 133px;
+}
+.bottom-logos li.partner-seven {
+	background: url("http://energyexcelerator.dev/wp-content/uploads/2014/02/partners-footer.jpg") no-repeat -873px 0px;
+	width: 127px;	
 }
 
 /*
