@@ -9,7 +9,7 @@
 <div id="main" class="default blog">
 	<div class="container">
 	<h2 class="section-title">From The Blog</h2>
-		<div id="sidebar-default" class="sidebar collapsable collapsed push-<?php sidebar_position_class(); ?>">
+		<div id="sidebar-default" class="sidebar collapsable collapsed <?php sidebar_position_class(); ?>">
 		    <div id="sidebar-toggle"></div>
 		    <?php get_sidebar(); ?>
 	  	</div><!-- #sidebar -->
