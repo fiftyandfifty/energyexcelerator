@@ -195,7 +195,7 @@ footer.partners p {
 .bottom-logos li {
 	display: inline-block;
 	height: 104px;
-	margin: 0s;
+	margin: 0;
 }
 
 .bottom-logos li.dept-energy {
@@ -208,9 +208,9 @@ footer.partners p {
 	width: 116px;
 }
 
-.botom-logos li.eco {
+.bottom-logos li.eco {
 	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -234px 0px;
-	width:118;	
+	width:118px;	
 }
 
 .bottom-logos li.climate-group {
