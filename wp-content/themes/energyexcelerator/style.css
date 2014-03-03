@@ -194,7 +194,7 @@ footer.partners p {
 
 .bottom-logos li {
 	display: inline-block;
-	height: 104px;
+	min-height: 104px;
 	margin: 0;
 }
 
@@ -223,11 +223,11 @@ footer.partners p {
 }
 .bottom-logos li.exec-office {
 	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -735px 0px;	
-	width: 133px;
+	width: 114px;
 }
 .bottom-logos li.partner-seven {
-	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -873px 0px;
-	width: 117px;}
+	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -854px 0px;
+	width: 83px;}
 
 /*
  * =================================================================================================== 

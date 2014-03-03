@@ -1,18 +1,15 @@
 <footer class="partners">
 	<div class="container center">
 		<p>Partners &amp; Supporters</p>
-
-	    <div class="row">
-            <ul class="bottom-logos">
-                <li class="dept-energy"></li>
-                <li class="c40"></li>
-                <li class="eco"></li>
-                <li class="climate-group"></li>
-                <li class="nyc-gov"></li>
-                <li class="exec-office"></li>
-                <li class="partner-seven"></li>
-            </ul>
-        </div>
+    <ul class="bottom-logos">
+        <li class="dept-energy"></li>
+        <li class="c40"></li>
+        <li class="eco"></li>
+        <li class="climate-group"></li>
+        <li class="nyc-gov"></li>
+        <li class="exec-office"></li>
+        <li class="partner-seven"></li>
+    </ul>
 	</div>
 </footer>
 
