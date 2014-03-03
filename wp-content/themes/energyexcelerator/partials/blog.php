@@ -35,7 +35,7 @@ $blog_query = new WP_Query( $blog_args ); ?>
 			</header>
 
 
-			<div class="sidebar collapsable collapsed push-<?php sidebar_position_class(); ?>">
+			<div class="sidebar collapsable collapsed <?php sidebar_position_class(); ?>">
 				<div id="sidebar-toggle"></div>
 				<?php get_sidebar(); ?>
 			</div><!-- #sidebar -->
