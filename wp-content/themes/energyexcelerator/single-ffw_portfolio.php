@@ -6,7 +6,7 @@
 
 <div id="main" class="page page-default default">
 	<div class="container">
-		<div id="sidebar-default" class="sidebar collapsable collapsed push-<?php sidebar_position_class(); ?>">
+		<div id="sidebar-default" class="sidebar collapsable collapsed <?php sidebar_position_class(); ?>">
 		  <div id="sidebar-toggle"></div>
 		  <?php get_sidebar( get_post_type() ); ?>
 		</div><!-- #sidebar -->
