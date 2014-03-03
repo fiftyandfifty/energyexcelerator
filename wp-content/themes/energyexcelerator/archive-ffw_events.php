@@ -1,21 +1,20 @@
 <?php get_header(); ?>
 
-<?php do_action('FFW_hero_before'); ?>
-<?php do_action('FFW_hero'); ?>
-<?php do_action('FFW_hero_after'); ?>
+<?php //do_action('FFW_hero_before'); ?>
+<?php //do_action('FFW_hero'); ?>
+<?php // do_action('FFW_hero_after'); ?>
+
+<div id="hero" class="hero-" style="background-image:url('http://www.energyexcelerator.com/wp-content/uploads/2014/03/events-hero.jpg'); height: 355px" >
+  <div class="container" style="">
+        <h1 style="text-align:center; margin-top:125px;">Events</h1>
+  </div>
+</div>
 
 <div id="main" class="page page-default default">
 	<div class="container">
     <div class="row">
       <header class="section-header">
-      	<h2 class="section-title">
-	        <?php 
-	          if ( function_exists( 'ffw_events_get_label_plural' ) ) : 
-	            echo ffw_events_get_label_plural(); 
-	          else : 
-	            echo 'Events';
-	          endif;  ?>
-	      </h2>
+      	
       </header>
     </div>
 

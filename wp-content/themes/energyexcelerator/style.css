@@ -176,42 +176,6 @@ footer.partners p {
 	font-family: "Open Sans", sans-serif;
 	color: #413d3d;
 }
-.bottom-logos {
-	text-align: center;
-}
-.bottom-logos li {
-	display: inline-block;
-	min-height: 104px;
-	margin: 0;
-}
-.bottom-logos li.dept-energy {
-	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat 0 0;
-	width: 108px;
-}
-.bottom-logos li.c40 {
-	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -113px 0px;
-	width: 116px;
-}
-.bottom-logos li.eco {
-	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -234px 0px;
-	width:118px;	
-}
-.bottom-logos li.climate-group {
-	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -357px 0px;
-	width: 241px;
-}
-.bottom-logos li.nyc-gov {
-	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -603px 0px;
-	width: 127px;
-}
-.bottom-logos li.exec-office {
-	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -735px 0px;	
-	width: 114px;
-}
-.bottom-logos li.partner-seven {
-	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -854px 0px;
-	width: 83px;
-}
 
 @media screen and (max-width: 769px) {
 	footer.partners { padding: 30px 0 ;}

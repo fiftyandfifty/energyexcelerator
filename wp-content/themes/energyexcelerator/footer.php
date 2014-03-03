@@ -1,15 +1,7 @@
 <footer class="partners">
 	<div class="container center">
 		<p>Partners &amp; Supporters</p>
-    <ul class="bottom-logos">
-        <li class="dept-energy"></li>
-        <li class="c40"></li>
-        <li class="eco"></li>
-        <li class="climate-group"></li>
-        <li class="nyc-gov"></li>
-        <li class="exec-office"></li>
-        <li class="partner-seven"></li>
-    </ul>
+    <img src="http://www.energyexcelerator.com/wp-content/uploads/2014/03/partner-footer.png" alt="partner logos">
 	</div>
 </footer>
 
