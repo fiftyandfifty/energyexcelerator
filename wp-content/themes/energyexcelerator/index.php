@@ -14,7 +14,7 @@
 		    <?php get_sidebar(); ?>
 	  	</div><!-- #sidebar -->
 
-		<div id="content" class="push-<?php sidebar_position_class(); ?>">
+		<div id="content " class="push-<?php sidebar_position_class(); ?>">
 			<div class="content-inner">
 				<?php 
 				$args = array(

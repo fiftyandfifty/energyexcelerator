@@ -99,6 +99,8 @@ Gravity Form Styles
 }
 
 /* th */
+header { font-size: 15px; }
+
 /* Hawaii page */
 .why-hawaii {
 	margin-top: -80px;
@@ -208,7 +210,12 @@ footer.partners p {
 }
 .bottom-logos li.partner-seven {
 	background: url("http://www.energyexcelerator.com/wp-content/uploads/2014/03/partners-footer.jpg") no-repeat -854px 0px;
-	width: 83px;}
+	width: 83px;
+}
+
+@media screen and (max-width: 769px) {
+	footer.partners { padding: 30px 0 ;}
+}
 
 /* ao */
 /* Home page - Hawaii is startup paradise */
